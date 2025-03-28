@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Fanzhuan" />
         <module name="more-money-spire-mod" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BlackLightRelic" target="1.8" />
+      <module name="ChouXiangRelic" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
