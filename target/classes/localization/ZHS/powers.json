@@ -1,0 +1,14 @@
+{
+  "ChouxiangRelic:NoBlockPower": {
+    "NAME": "防御转金属化",
+    "DESCRIPTIONS": [
+      "从卡牌中获得格挡减半，同时获得等同于卡面数值的金属化"
+    ]
+  },
+  "ChouxiangRelic:NoDamagePower": {
+    "NAME": "攻击转荆棘",
+    "DESCRIPTIONS": [
+      "不再从从卡牌中造成攻击伤害，改为获得半数荆棘"
+    ]
+  }
+}

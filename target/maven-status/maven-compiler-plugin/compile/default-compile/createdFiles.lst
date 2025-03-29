@@ -1,0 +1,14 @@
+FanzhuanMod\cardModifier\StartModifier.class
+FanzhuanMod\patchs\InterruptUseCardFieldPatches.class
+FanzhuanMod\relic\aoman.class
+FanzhuanMod\patchs\InterruptUseCardFieldPatches$InterceptPls$1.class
+FanzhuanMod\config\RelicConfig.class
+FanzhuanMod\cardModifier\RandomStanceModifier.class
+FanzhuanMod\utils\Invoker.class
+FanzhuanMod\patchs\InterruptUseCardFieldPatches$InterceptUseField.class
+FanzhuanMod\helpers\ModHelper.class
+FanzhuanMod\cardModifier\CalmModifier.class
+FanzhuanMod\patchs\CardLibraryPatch.class
+FanzhuanMod\hook\LoadMySpireMod.class
+FanzhuanMod\patchs\InterruptUseCardFieldPatches$InterceptPls.class
+FanzhuanMod\patchs\InterruptUseCardFieldPatches$MakeStatEquivalentCopy.class

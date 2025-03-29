@@ -1,0 +1,19 @@
+{
+  "Fanzhuan:CalmModifier": {
+    "TEXT": [
+      "平静",
+      "愤怒"
+    ]
+  },"Fanzhuan:RandomStanceModifier": {
+  "TEXT": [
+    "退出当前",
+    "进入随机"
+  ]
+},"Fanzhuan:StartModifier": {
+  "TEXT": [
+    "开始",
+    "结束"
+  ]
+}
+
+}

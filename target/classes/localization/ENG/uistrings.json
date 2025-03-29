@@ -1,0 +1,22 @@
+{
+  "ChouxiangRelic:compoundeffect": {
+    "TEXT": [
+      "Cards become 0 cost"
+    ]
+  },
+  "ChouxiangRelic:MetalModifier": {
+    "TEXT": [
+      " NL Gain !B! Metallization ",
+      "Block",
+      "Metallization"
+    ]
+  },
+  "ChouxiangRelic:ThronsModifier": {
+    "TEXT": [
+      "Damage",
+      "Thorns",
+      "Deal",
+      "Gain"
+    ]
+  }
+}

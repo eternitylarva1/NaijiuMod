@@ -1,0 +1,57 @@
+{
+  "ChouxiangRelic:tanlan": {
+"NAME": "贪婪金币",
+"FLAVOR": "我的钱才不会给你呢！",
+"DESCRIPTIONS": [
+"拾取时获得9999金币。每个商店只能进行一次消费。"]
+},"ChouxiangRelic:chuncui": {
+"NAME": "纯粹力量",
+"FLAVOR": "如果有一张牌既能起甲又能打伤害就好了……",
+"DESCRIPTIONS": [
+"战斗开始时获得50力量，50敏捷。每回合最多打出1张牌。"]
+},"ChouxiangRelic:dengyideng": {
+"NAME": "等一等",
+"FLAVOR": "你这局打了3个小时？",
+"DESCRIPTIONS": [
+"普通战等待5分钟;精英战等待15分钟;BOSS战等待30分钟;终幕战等待60分钟后，消灭所有敌人。"]
+},"ChouxiangRelic:kuangwang": {
+"NAME": "狂妄之火",
+"FLAVOR": "战胜精英:16个。",
+"DESCRIPTIONS": [
+"拾起时获得红钥匙,之后的所有火堆变为带火精英。击败精英后随机敲一张牌，回复20%生命"]
+},"ChouxiangRelic:weixianbaoxiang": {
+"NAME": "危险宝箱",
+"FLAVOR": "你是多喜欢宝箱啊?",
+"DESCRIPTIONS": [
+"所有普通敌人变成宝箱房间。所有问号变成带火精英"]
+},"ChouxiangRelic:liliangdaijia": {
+"NAME": "liliangdaijia",
+"FLAVOR": "我的牌呢？！",
+"DESCRIPTIONS": [
+"战斗开始时获得15力量敏捷集中，你无法洗牌。"]
+},
+  "ChouxiangRelic:dangao": {
+"NAME": "美味蛋糕",
+"FLAVOR": "太好吃了，导致你再也不想吃别的东西了。",
+"DESCRIPTIONS": [
+"拾取时获得150血量上限。你无法再回复生命。"]
+},"ChouxiangRelic:gangtiehexin": {
+"NAME": "钢铁核心",
+"FLAVOR": "防御大于一切!",
+"DESCRIPTIONS": [
+"从卡牌中获得格挡的减半,并获得等量金属化;造成攻击伤害时改为获得卡面数值半数荆棘。"]
+},"ChouxiangRelic:aoman": {
+"NAME": "傲慢之证",
+"FLAVOR": "一大堆遗物总比一个好……吧?",
+"DESCRIPTIONS": [
+"拾取时获得所有原版BOSS遗物。 NL 请勿通过loadout获取此遗物，否则你会无法移动.用控制台"]
+},"ChouxiangRelic:chenghuacheng": {
+"NAME": "尘化尘",
+"FLAVOR": "牌烧光了我打什么?",
+"DESCRIPTIONS": [
+"拾起时,你 #y卡组中 的所有牌变为0费, #y虚无 ， #y消耗 .(对印牌无效)"]
+}
+
+}
+
+
