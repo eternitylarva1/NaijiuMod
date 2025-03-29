@@ -1,16 +1,13 @@
-package cn.candy.relic;
+package FanzhuanMod.relic;
 
+import FanzhuanMod.helpers.ModHelper;
 import basemod.abstracts.CustomRelic;
-import cn.candy.config.RelicConfig;
-import cn.candy.helpers.ModHelper;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.lwjgl.Sys;
 
 /**
  * 这个遗物会在开始的时候赋予房间所有怪物3点血量

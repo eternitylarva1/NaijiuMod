@@ -1,7 +1,7 @@
-package cn.candy.helpers;
+package FanzhuanMod.helpers;
 
 public class ModHelper {
     public static String makePath(String id) {
-        return "ChouxiangRelic:" + id;
+        return "Fanzhuan:" + id;
     }
 }

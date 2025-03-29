@@ -1,0 +1,14 @@
+{
+  "ChouxiangRelic:NoBlockPower": {
+    "NAME": "Block to Metallization",
+    "DESCRIPTIONS": [
+      "Halve block gained from cards and gain Metallization equal to the card's value."
+    ]
+  },
+  "ChouxiangRelic:NoDamagePower": {
+    "NAME": "Attack to Thorns",
+    "DESCRIPTIONS": [
+      "Do not deal attack damage from cards; instead gain half Thorns equal to the card's damage."
+    ]
+  }
+}

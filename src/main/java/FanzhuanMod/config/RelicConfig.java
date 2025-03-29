@@ -1,4 +1,4 @@
-package cn.candy.config;
+package FanzhuanMod.config;
 
 /**
  * 自定义遗物的常量接口
