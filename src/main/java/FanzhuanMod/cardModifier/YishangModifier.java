@@ -9,26 +9,20 @@ package FanzhuanMod.cardModifier;
 
 
 import FanzhuanMod.helpers.ModHelper;
-import FanzhuanMod.patchs.InterruptUseCardFieldPatches;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.MetallicizePower;
 
-public class CalmModifier extends AbstractCardModifier {
-    public static String ID = ModHelper.makePath(CalmModifier.class.getSimpleName());
+public class YishangModifier extends AbstractCardModifier {
+    public static String ID = ModHelper.makePath(YishangModifier.class.getSimpleName());
     private static final UIStrings uiStrings;
 
 
-    public CalmModifier() {
+    public YishangModifier() {
     }
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
           }
@@ -43,7 +37,7 @@ public class CalmModifier extends AbstractCardModifier {
     }
 
     public boolean shouldApply(AbstractCard card) {
-        return !(CardModifierManager.hasModifier(card, ID))&&(card.rawDescription.contains(uiStrings.TEXT[0])||card.rawDescription.contains(uiStrings.TEXT[1]));
+        return card.rawDescription.contains(uiStrings.TEXT[2])&&!(CardModifierManager.hasModifier(card, ID))&&(card.rawDescription.contains(uiStrings.TEXT[0])||card.rawDescription.contains(uiStrings.TEXT[1]));
     }
 
     public void onInitialApplication(AbstractCard card) {
@@ -59,7 +53,7 @@ public class CalmModifier extends AbstractCardModifier {
     }
 
     public AbstractCardModifier makeCopy() {
-        return new CalmModifier();
+        return new YishangModifier();
     }
 
     public String identifier(AbstractCard card) {

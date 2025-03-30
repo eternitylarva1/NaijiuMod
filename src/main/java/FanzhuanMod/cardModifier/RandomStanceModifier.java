@@ -38,7 +38,6 @@ public class RandomStanceModifier extends AbstractCardModifier {
     }
 
     public void onInitialApplication(AbstractCard card) {
-        InterruptUseCardFieldPatches.InterceptUseField.interceptUse.set(card, Boolean.valueOf(true));
 
     }
 

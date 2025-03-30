@@ -1,5 +1,5 @@
 package FanzhuanMod.patchs;
-
+/*
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.LineFinder;
 import com.evacipated.cardcrawl.modthespire.lib.Matcher;
@@ -81,3 +81,4 @@ public class ActionReplacementPatches {
     }
   }
 }
+*/

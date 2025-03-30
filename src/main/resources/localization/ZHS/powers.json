@@ -1,14 +1,27 @@
 {
-  "ChouxiangRelic:NoBlockPower": {
-    "NAME": "防御转金属化",
+  "Adaptation": {
+    "NAME": "猛虎下山",
     "DESCRIPTIONS": [
-      "从卡牌中获得格挡减半，同时获得等同于卡面数值的金属化"
+      "每当你进入 #y平静 时，抽 #b",
+      " 张牌。",
+      " 张牌。"
     ]
-  },
-  "ChouxiangRelic:NoDamagePower": {
-    "NAME": "攻击转荆棘",
-    "DESCRIPTIONS": [
-      "不再从从卡牌中造成攻击伤害，改为获得半数荆棘"
-    ]
-  }
+  }, "WrathNextTurnPower": {
+  "NAME": "怒火中烧",
+  "DESCRIPTIONS": [
+    "在你的回合开始时进入 #y平静 。"
+  ]
+},  "LikeWaterPower": {
+  "NAME": "如水",
+  "DESCRIPTIONS": [
+    "在你的回合结束时，如果你处于 #y愤怒 ， 则获得 #b",
+    " 点 #y格挡 。"
+  ]
+}, "StaticDischarge": {
+  "NAME": "静电释放",
+  "DESCRIPTIONS": [
+    "当你受到 #y攻击 伤害时， #y生成 #b",
+    " 个 #y冰霜 充能球。"
+  ]
+}
 }

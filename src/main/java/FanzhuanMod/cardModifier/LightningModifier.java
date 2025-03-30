@@ -9,26 +9,23 @@ package FanzhuanMod.cardModifier;
 
 
 import FanzhuanMod.helpers.ModHelper;
-import FanzhuanMod.patchs.InterruptUseCardFieldPatches;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.Electrodynamics;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.MetallicizePower;
 
-public class CalmModifier extends AbstractCardModifier {
-    public static String ID = ModHelper.makePath(CalmModifier.class.getSimpleName());
+import java.util.regex.Pattern;
+
+public class LightningModifier extends AbstractCardModifier {
+    public static String ID = ModHelper.makePath(LightningModifier.class.getSimpleName());
     private static final UIStrings uiStrings;
 
 
-    public CalmModifier() {
+    public LightningModifier() {
     }
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
           }
@@ -36,10 +33,22 @@ public class CalmModifier extends AbstractCardModifier {
         //rawDescription中的格挡改为金属化
 
         String temp = "TEMP_PLACEHOLDER";
+        if(card instanceof Electrodynamics){
+            String target = uiStrings.TEXT[0]; // 要替换的目标词（如 "平静"）
+            String replacement = "TEMP_PLACEHOLDER"; // 临时占位符
+            String regex = "(?s)^((?:.*?" + Pattern.quote(target) + ".*?){1})" + Pattern.quote(target);
+            String newDesc = rawDescription.replaceFirst(regex, "$1" + replacement);
+
+            // 后续替换逻辑保持不变
+            return newDesc
+                    .replace(uiStrings.TEXT[1], uiStrings.TEXT[0])
+                    .replace(replacement, uiStrings.TEXT[1]);
+        }
         return rawDescription
                 .replace(uiStrings.TEXT[0], temp)  // 平静 -> 临时
                 .replace(uiStrings.TEXT[1], uiStrings.TEXT[0]) // 愤怒 -> 平静
                 .replace(temp, uiStrings.TEXT[1]); // 临时 -> 愤怒
+
     }
 
     public boolean shouldApply(AbstractCard card) {
@@ -59,7 +68,7 @@ public class CalmModifier extends AbstractCardModifier {
     }
 
     public AbstractCardModifier makeCopy() {
-        return new CalmModifier();
+        return new LightningModifier();
     }
 
     public String identifier(AbstractCard card) {

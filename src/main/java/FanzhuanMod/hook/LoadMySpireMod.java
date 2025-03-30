@@ -1,19 +1,26 @@
 package FanzhuanMod.hook;
 
 
+import FanzhuanMod.cards.EmptyFist;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.CrackedCore;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,7 +33,7 @@ import org.apache.logging.log4j.Logger;
  **/
 @SpireInitializer
 @SuppressWarnings("unused")
-public class LoadMySpireMod implements PostDungeonUpdateSubscriber,StartActSubscriber,PostDungeonInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber {
+public class LoadMySpireMod implements PostInitializeSubscriber,EditCardsSubscriber,PostDungeonUpdateSubscriber,StartActSubscriber,PostDungeonInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber {
     /**
      * 日志对象 用来输出日志 指定本类 LoadMyEasyMod 以确认日志的输出对象
      */
@@ -135,4 +142,27 @@ public class LoadMySpireMod implements PostDungeonUpdateSubscriber,StartActSubsc
     public void receivePostDungeonUpdate() {
 
     }
+
+    @Override
+    public void receiveEditCards() {
+
+        new AutoAdd(ModID)
+                .packageFilter(EmptyFist.class)
+                .any(AbstractCard.class, (info, card) -> {
+                    BaseMod.addCard(card);
+
+                    UnlockTracker.markCardAsSeen(card.cardID);
+
+                });
+
+
+    }
+
+    @Override
+    public void receivePostInitialize() {
+        BaseMod.registerModBadge(ImageMaster.loadImage("localization/relics/bell.png"),ModID,"Dieyou", "杀戮尖塔，但是效果反转", new MyModConfig());
+
+    }
+
+
 }
