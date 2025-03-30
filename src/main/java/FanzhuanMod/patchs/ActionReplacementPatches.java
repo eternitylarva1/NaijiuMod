@@ -12,6 +12,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatches2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.ChangeStateAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -48,6 +49,7 @@ public class ActionReplacementPatches {
           action[0] = (AbstractGameAction)new DamageAction((AbstractCreature)ActionReplacementPatches.target, new DamageInfo((AbstractCreature)AbstractDungeon.player, ActionReplacementPatches.cardInUse.damage, ActionReplacementPatches.cardInUse.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE);
         }  
     }
+
   }
   
   @SpirePatch(clz = AbstractPlayer.class, method = "useCard")
