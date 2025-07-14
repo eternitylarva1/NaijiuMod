@@ -1,42 +1,18 @@
 {
-  "Fanzhuan:CalmModifier": {
+  "Naijiu:ItemMod": {
     "TEXT": [
-      "平静",
-      "愤怒"
+      " NL 耐久 "
     ]
-  },"Fanzhuan:RandomStanceModifier": {
-  "TEXT": [
-    "退出当前",
-    "进入随机"
-  ]
-},"Fanzhuan:StartModifier": {
-  "TEXT": [
-    "开始",
-    "结束"
-  ]
-},"Fanzhuan:LightningModifier": {
-  "TEXT": [
-    "闪电",
-    "冰霜"
-  ]
-},"Fanzhuan:DarkModifier": {
-  "TEXT": [
-    "黑暗",
-    "等离子"
-  ]
-},"Fanzhuan:YishangModifier": {
-  "TEXT": [
-    "易伤",
-    "虚弱",
-    "给予"
-  ]
-},"Fanzhuan:MyModConfig": {
+  },"Naijiu:MyModConfig": {
   "TEXT_DICT": {
-    "EnableLighting": "允许将闪电球和冰霜充能球互相替换(重启后生效)",
-    "EnableDark": "允许将黑暗充能球和等离子充能球互相替换(重启后生效)",
-    "EnableCalm": "允许将平静姿态和愤怒姿态互相替换(重启后生效)",
-    "EnableRandomStance": "允许将退出当前姿态替换为进入随机姿态(重启后生效)",
-    "EnableYishang": "允许给予易伤和给予虚弱互相替换(重启后生效)"
+    "Rare": "稀有(金卡)",
+    "UnCommon": "蓝卡",
+    "Common": "白卡",
+    "Other": "其他",
+    "Attack": "攻击",
+    "Skill": "技能",
+    "Power": "能力",
+    "Description": "耐久决定方式:稀有度基数*卡牌类型基数。下方可以调整对应的基数"
   }
 }
 
