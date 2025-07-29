@@ -1,0 +1,769 @@
+{
+  "Naijiu:ItemMod": {
+    "TEXT": [
+      "耐久",
+      "打磨",
+      "每次打出此牌,耐久-1.耐久归零时，卡牌从卡组中移除,在火堆敲牌可以回满耐久",
+      "每次打出卡牌,打磨值+1,打磨一定次数后，可以在火堆进行一次免费的精锻（添加词条),之后打磨归零"
+    ]
+  },
+  "Naijiu:MyModConfig": {
+  "TEXT_DICT": {
+    "Rare": "稀有(金卡)",
+    "UnCommon": "蓝卡",
+    "Common": "白卡",
+    "Other": "其他",
+    "Attack": "攻击",
+    "Skill": "技能",
+    "Power": "能力",
+    "Description": "耐久决定方式:稀有度基数*卡牌类型基数。下方可以调整对应的基数",
+     "Damo": "打磨所需次数"
+  }
+
+},
+  "Naijiu:FumoOption": {
+    "TEXT": [
+      "精锻",
+      "选择一个打磨完成的卡牌增加随机词条",
+      "卡组中没有可以精锻的卡牌",
+      "请选择一张卡牌进行精锻"
+    ]
+  },
+
+  "Naijiu:AbstractAugment": {
+    "TEXT": [
+      "微小的"
+    ]
+  },
+  "Naijiu:ModConfigs": {
+    "TEXT": [
+      "启用卡牌修改",
+      "修改几率百分比 (默认 10):",
+      "普通修改比重 (默认 4):",
+      "罕见修改比重 (默认 3):",
+      "稀有修改比重 (默认 2):",
+      "允许修改初始牌",
+      "允许在没有棱镜碎片的情况下获得充能球修改",
+      "卡牌稀有度权重偏置 (默认 1):",
+      "允许修改立刻获得的牌 (噬咬, 潘多拉的魔盒, 诅咒, 等等)",
+      "允许修改商店牌",
+      "允许启用附加事件",
+      "启用修改提示词",
+      "尝试添加修改词条次数 (默认 1):",
+      "显示修改概率统计",
+      "允许修改战斗中添加的牌"
+    ],
+    "EXTRA_TEXT": [
+      "奇美拉卡牌",
+      "为奖励卡牌添加随机修改。查看Mod设置来更改设置！",
+      "#y出现概率 :",
+      " 修改: #b",
+      " 修改: #b",
+      " NL 普通修改: #b",
+      " NL 罕见修改: #b",
+      " NL 稀有修改: #b",
+      " NL NL #y普通牌 :",
+      " NL NL #y罕见牌 :",
+      " NL NL #y稀有牌 :",
+      " NL NL #y普通/基础牌 :",
+      " NL NL #y事件/诅咒牌 :"
+    ]
+  },
+  "Naijiu:CrossoverConfig": {
+    "TEXT": [
+      "启用基础奇美拉卡牌内容",
+      "页",
+      "修改词条"
+    ]
+  },
+  "Naijiu:MainMenu": {
+    "TEXT": [
+      "卡牌修改"
+    ]
+  },
+  "Naijiu:ModifierScreen": {
+    "TEXT": [
+      "返回",
+      "看升级版",
+      "稀有度: ",
+      "可适用牌: ",
+      "所有角色",
+      "设置",
+      "所有稀有度",
+      "无",
+      "禁用此修改"
+    ]
+  },
+  "Naijiu:SCVScreen": {
+    "TEXT": [
+      "预览修改"
+    ]
+  },
+  "Naijiu:AugmentPreviewCard": {
+    "TEXT": [
+      "修改"
+    ]
+  },
+  "Naijiu:BlacksmithEvent": {
+    "TEXT": [
+      "你决定好好利用这个熔炉... NL #y@铛铛铛@ NL ...来强化你的卡牌!",
+      "选择一张卡来增加",
+      "易碎",
+      "耗能 -1 NL 消耗 NL 只能应用于不会消耗且耗能不变的卡牌"
+    ],
+    "EXTRA_TEXT": [
+      "[修补] #g给予一张攻击牌或技能牌 易碎。",
+      "[锁定] 需要: 不会消耗且耗能不变的攻击牌或技能牌。",
+      "[离开]"
+    ]
+  },
+  "Naijiu:DuplicatorEvent": {
+    "TEXT": [
+      "你尊敬地跪了下来，祭坛上出现了一个可怕的影像，撞到了你的身上。",
+      "选择一张卡来增加",
+      "余音",
+      "打出两次 NL 消耗 NL 只能应用于不会消耗的卡牌"
+    ],
+    "EXTRA_TEXT": [
+      "[浸染] #g给予一张攻击牌或技能牌 余音。",
+      "[锁定] 需要: 不会消耗的攻击牌或技能牌。",
+      "[离开]"
+    ]
+  },
+  "Naijiu:FallingEvent": {
+    "TEXT": [
+      "随着你竭尽全力, 你同时采用了三个选项使得你落地的时候没有摔碎任何东西。但是你的装备看起来更糟糕了。",
+      "选择一张卡来增加",
+      "墓地",
+      "战斗开始时，本卡牌置于弃牌堆"
+    ],
+    "EXTRA_TEXT": [
+      "[竭力] #r给予上述三张卡牌 墓地。",
+      "[锁定] 需要: 能力牌、技能牌、攻击牌各一张。",
+      "[离开]"
+    ]
+  },
+  "Naijiu:GhostsEvent": {
+    "TEXT": [
+      "#y\"好极了\" NL 那个幽灵鬼影的话音刚落，你就看见它本已硕大的嘴张开得越来越大，从中涌出更多 #p~浓重的黑烟~ 笼罩了整个房间。你什么都看不见，也无法呼吸。 NL NL 就在你快要失去意识的时候，烟雾的感觉消失了。 NL NL 不管那三个东西是什么存在，它们现在已经不在了。你重新上路，但总觉得自己的内心变得 #b空洞 。",
+      "选择一张卡来增加",
+      "畸变的",
+      "获得1层无实体 NL 消耗 NL 只能应用于不会消耗的卡牌"
+    ],
+    "EXTRA_TEXT": [
+      "[接受] #g给予一张攻击牌或技能牌 畸变。 #r失去 #r%s #r最大生命。",
+      "[锁定] 需要: 不会消耗的攻击牌或技能牌。",
+      "[离开]"
+    ]
+  },
+  "Naijiu:LibraryEvent": {
+    "TEXT": [
+      "你拽下离你最近的一本书，草草读了一半，然后开始乱涂乱抹，直到修改了整个故事。 NL NL ~呵。~ NL NL 你把它放回了它本来在的地方，心里想着下次哪个倒霉鬼会读到它。",
+      "选择一张卡来增加",
+      "选择一条修改",
+      "这本书是关于一个被昆虫控制的相当英雄的少女的。书中有许多关于超能力、战术和…… ~嘿~ ， @等一下！@ 有人在这上面 #r@乱涂乱画@  ！谁会干这么缺德的事情！",
+      "这本书是关于一个在群星旅行，最后落难在一个荒芜陌生星球上的男人的。你期盼着他最终能够回到家园，但看起来有人把书破坏了！ NL 多么令人扫兴。",
+      "这本书是关于一个巨大的废弃底下建筑的，地上的环境已经无法生存，小说的内容充满了阴谋、洗脑和不公。本书的后半部分充满喜感地无法辨认。 NL 你开始思考是否在高塔中也存在类似的关系网。"
+    ],
+    "EXTRA_TEXT": [
+      "[重写] #g选择一张卡牌，从5个修改中选择一个修改附加在其上。",
+      "[锁定] 需要: 能够接受修改的卡牌。",
+      "[离开]"
+    ]
+  },
+  "Naijiu:NestEvent": {
+    "TEXT": [
+      "你站在队伍外观察接下来发生的事情。没过一会, 一队 #r邪教徒 到达了并且开始兴奋地 ~挥舞着~ 自己的武器并且 @呼喊着@ 些什么。 NL NL #r@\"杀！杀～杀杀杀！！\"@ NL #b~\"咔～咔～咔—咔！\"~ NL #r@\"杀！杀～杀杀杀！！\"@ NL #b~\"咔～咔～咔—咔！\"~ NL NL 你想着你可以从他们的行为中学到一点什么……",
+      "当你观察 #r邪教徒 和他们的 #r@仪式@ 时，你陷入了一种 #p~幻象~ 。 NL NL 随着一星 #b@灵感@ 的闪入，你重新集中精神并… NL #y@铛铛铛@ NL …强化了你的卡牌！ ",
+      "选择一张卡来增加",
+      "邪教",
+      "获得1点力量 NL 伤害 -20%.",
+      "狂热",
+      "伤害 +50% NL 消耗 NL 只能应用于不会消耗的卡牌"
+    ],
+    "EXTRA_TEXT": [
+      "[观察]",
+      "[锁定] 需要: 一张攻击牌。",
+      "[研习邪教徒] #g给予一张攻击牌 邪教。",
+      "[研习仪式] #g给予一张攻击牌 狂热。",
+      "[锁定] 需要: 不会消耗的攻击牌。",
+      "[离开]"
+    ]
+  },
+  "Naijiu:NestEventDownfall": {
+    "TEXT": [
+      "你站在一旁并鼓励邪教徒们重复他们刚才做的动作。 没过一会，邪教徒开始高兴地 ~挥舞着~ 自己的武器并且 @呼喊着@ 些什么。 NL NL #r@\"杀！杀～杀杀杀！！\"@ NL #b~\"咔～咔～咔—咔！\"~ NL #r@\"杀！杀～杀杀杀！！\"@ NL #b~\"咔～咔～咔—咔！\"~ NL NL 你想着你可以从他们的行为中学到一点什么……",
+      "当你观察 #r邪教徒 和他们的 #r@仪式@ 时，你陷入了一种 #p~幻象~ 。 NL NL 随着一星 #b@灵感@ 的闪入，你重新集中精神并… NL #y@铛铛铛@ NL …强化了你的卡牌！ ",
+      "选择一张卡来增加",
+      "邪教",
+      "获得1点力量 NL 伤害 -20%.",
+      "狂热",
+      "伤害 +50% NL 消耗 NL 只能应用于不会消耗的卡牌"
+    ],
+    "EXTRA_TEXT": [
+      "[观察]",
+      "[锁定] 需要: 一张攻击牌。",
+      "[研习邪教徒] #g给予一张攻击牌 邪教。",
+      "[研习仪式] #g给予一张攻击牌 狂热。",
+      "[锁定] 需要: 不会消耗的攻击牌。",
+      "[离开]"
+    ]
+  },
+  "Naijiu:SensoryEvent": {
+    "TEXT": [
+      "#y拒绝 NL NL 你 @拒绝@ 被你不认识的记忆所支配！某个你内在的东西 #r~碎裂了。~  NL NL 你 #r痛苦地 摇了摇头并环顾四周。事物没有什么不同, 然而感觉又 #p~那么不一样。~ ",
+      "选择一张卡来增加",
+      "自动",
+      "自动打出 NL 抽1张牌 NL 只能应用于没有保留与自动打出的牌"
+    ],
+    "EXTRA_TEXT": [
+      "[拒绝] #g给予一张卡牌 自动。 #r失去 #r%s #r点生命。",
+      "[锁定] 需要: 一张非保留牌。",
+      "[离开]"
+    ]
+  },
+  "Naijiu:SerpentEvent": {
+    "TEXT": [
+      "~\"对～~ NL ~这会很值～得的。~ NL ~嘶……嘶～嘶……\"~",
+      "蛇抬起头，往上喷出了一堆 #y金币 ！ NL 这令人震惊又有点可怕。 NL 你把 #y金币 收好，谢过蛇后，重新上路。",
+      "贪婪",
+      "斩杀时，获得15金币 NL 消耗"
+    ],
+    "EXTRA_TEXT": [
+      "[同意] #g给予所有攻击牌 贪婪。",
+      "[锁定] 需要: 一张攻击牌。",
+      "[离开]",
+      "[继续]"
+    ]
+  },
+  "Naijiu:SerpentEventDownfall": {
+    "TEXT": [
+      "~\"对～~ NL ~这会很值～得的。~ NL ~嘶……嘶～嘶……\"~",
+      "蛇抬起头，用它的 ~催眠之眼~ 瞪视着你！ NL 你觉得自己 #y@充满力量@ 并且准备扫除面前敢于阻碍你的一切！ NL 你谢过蛇后，重新上路。",
+      "猛击",
+      "对所有敌人造成6点伤害。 NL 消耗 。"
+    ],
+    "EXTRA_TEXT": [
+      "[同意] #g给予所有攻击牌 猛击。",
+      "[锁定] 需要: 一张攻击牌。",
+      "[离开]",
+      "[继续]"
+    ]
+  },
+  "Naijiu:ShiningEvent": {
+    "TEXT": [
+      "通过往光柱里丢入装备, 你发现装备把光芒吸收了。它看起来散发着 #y~诱人的光芒。~ NL 但当你把它捡起来的时候，你发现它 #r@出奇的烫@！ 你很快把它丢了出去并处理你的烧伤伤口。",
+      "闪光",
+      "虚无 NL 抽到本牌时，获得 [E] NL 只能应用于没有虚无的牌。"
+    ],
+    "EXTRA_TEXT": [
+      "[扔出] #g给予一张随机卡牌 闪光。 #r失去 #r%s #r生命。",
+      "[锁定] 需要: 一张没有虚无的卡牌。",
+      "[离开]"
+    ]
+  },
+  "Naijiu:TransmogrifierEvent": {
+    "TEXT": [
+      "神龛的力量涌入你，你感觉自己的内心发生了一些变化。",
+      "选择两张卡来增加"
+    ],
+    "EXTRA_TEXT": [
+      "[浸染] #g给予两张随机卡牌一个随机修改。",
+      "[锁定] 需要: 两张能够接受修改的卡牌。",
+      "[离开]"
+    ]
+  },
+  "Naijiu:ExampleMod": {
+    "TEXT": ["前缀名字", "后缀名字", "Tooltip里显示的玩意"],
+    "EXTRA_TEXT": ["附加描述"]
+  },
+  "Naijiu:AberrantMod": {
+    "TEXT": ["畸变", "", "获得 #b1 层 #y无实体。 NL #y消耗。"],
+    "EXTRA_TEXT": [" NL 获得1层 无实体 。 NL 消耗 。"]
+  },
+  "Naijiu:AbsoluteMod": {
+    "TEXT": ["绝对化", "", "卡牌数值增加 #b33% 。 NL 必须在其它 #y非绝对化 卡牌之前打出。 NL （如果你不打出 #b绝对化 卡牌，其它卡牌不能被打出。）"],
+    "EXTRA_TEXT": [" NL 绝对化卡牌必须在其他卡牌之前打出。",
+      "Translator note: This is the cant use message that will appear",
+      ""," 是绝对化的！"]
+  },
+  "Naijiu:AllOutMod": {
+    "TEXT": ["全力", "", "造成的伤害增加 #b33% 。 NL 丢弃一张随机手牌。"],
+    "EXTRA_TEXT": [" NL 丢弃 %d 张随机手牌。",
+      "下面是替换 全力攻击 本卡的字符串，第一个是搜索用，第二个是用来替换的字符串。",
+      " NL 丢弃一张随机手牌。",
+      " NL 丢弃两张随机手牌。"]
+  },
+  "Naijiu:AlphaMod": {
+    "TEXT": ["阿尔法", "", "本牌耗能减少 #b2 。 NL 将一张本牌的 #y贝塔 洗入你的抽牌堆中。 NL #y消耗 。"],
+    "EXTRA_TEXT": ["将一张 *贝塔 %s 洗入你的抽牌堆中。"," NL 消耗。", "固有。 NL "]
+  },
+  "Naijiu:BetaMod": {
+    "TEXT": ["贝塔", "", "本牌耗能减少 #b1 。 NL 将一张本牌的 #y欧米伽 洗入你的抽牌堆中。 NL #y消耗 。"],
+    "EXTRA_TEXT": ["将一张 *欧米伽 %s 洗入你的抽牌堆中。"," NL 消耗。"]
+  },
+  "Naijiu:OmegaMod": {
+    "TEXT": ["欧米伽", "", "卡牌数值增加 #b200%"],
+    "EXTRA_TEXT": []
+  },
+  "Naijiu:AngryMod": {
+    "TEXT": ["愤怒", "", "在弃牌堆放入1张此牌的复制品。"],
+    "EXTRA_TEXT": [" NL 在弃牌堆放入1张此牌的复制品。",
+      "愤怒本家牌的字符串替换。",
+      " NL 在弃牌堆放入1张此牌的复制品。",
+      " NL 在弃牌堆放入2张此牌的复制品。"]
+  },
+  "Naijiu:AmplifiedMod": {
+    "TEXT": ["强化", "", "本牌耗能增加 #b1 。 NL 按比例增加魔法数字（非攻击/ #y格挡 ）。"],
+    "EXTRA_TEXT": []
+  },
+  "Naijiu:ArmedMod": {
+    "TEXT": ["武装", "", "获得的 #y格挡 减少 #b20% 。 NL #y升级 #b1(+1) 张随机手牌。"],
+    "EXTRA_TEXT": [" NL 升级 %s 张随机手牌。", " NL 升级 %s 张随机手牌。"]
+  },
+  "Naijiu:AugerMod": {
+    "TEXT": ["螺旋", "", "如果打破了目标的 #y格挡 ，给予 #y易伤 。"],
+    "EXTRA_TEXT": [" NL 如果打破了目标的 格挡，给予 %d 层 易伤 。"]
+  },
+  "Naijiu:AutoMod": {
+    "TEXT": ["自动：", "", "#y自动打出 。 NL 抽一张牌。"],
+    "EXTRA_TEXT": ["自动打出。 NL "," NL 抽 %d 张牌。"]
+  },
+  "Naijiu:BashMod": {
+    "TEXT": ["痛击", "", "造成的伤害减少 #b25% 。 NL 给予 #y易伤 。"],
+    "EXTRA_TEXT": [" NL 给予 %d 层 易伤 。"]
+  },
+  "Naijiu:BerserkMod": {
+    "TEXT": ["狂战士", "", "当你的生命值低于 #b50% 时，造成 #b50% 更多伤害。"],
+    "EXTRA_TEXT": [" NL 当你的生命值低于 50% 时，造成 50% 更多伤害。"]
+  },
+  "Naijiu:BlasphemousMod": {
+    "TEXT": ["渎神", "", "卡牌数值增加 #b400% 。 NL 在下回合死亡。"],
+    "EXTRA_TEXT": [" NL 在下回合死亡。"]
+  },
+  "Naijiu:BloodyMod": {
+    "TEXT": ["", "还血", "本牌耗能增加 #b1 。 NL 你每在战斗中失去生命一次，这张牌的耗能就减少 #b1 。"],
+    "EXTRA_TEXT": ["你每在战斗中失去生命一次，这张牌的耗能就减少 [E] 。 NL ",
+      "下面替换本家牌",
+      "你每在战斗中失去生命一次，这张牌的耗能就减少 [E] 。 NL ",
+      "你每在战斗中失去生命一次，这张牌的耗能就减少 [E] [E] 。 NL "]
+  },
+  "Naijiu:BludgeonMod": {
+    "TEXT": ["粗重", "", "本牌耗能为 #b3 。 NL 基于卡牌的初始耗能，卡牌数值增加 #b250% 至 #b400% 。"],
+    "EXTRA_TEXT": []
+  },
+  "Naijiu:BlurryMod": {
+    "TEXT": ["残影", "", "获得的 #y格挡 减少 #b25% 。 NL 下一回合开始时 #y格挡 不会消失。"],
+    "EXTRA_TEXT": [" NL 你的下1回合开始时 格挡 不会消失。"]
+  },
+  "Naijiu:BootMod": {
+    "TEXT": ["启动：", "", "增加 #y固有 。"],
+    "EXTRA_TEXT": [" 固有 。 NL "]
+  },
+  "Naijiu:BowlingMod": {
+    "TEXT": ["碰撞", "", "造成的伤害减少 #b33% 。 NL 当前每有一名敌人，造成一次。"],
+    "EXTRA_TEXT": ["当前每有一名敌人。"]
+  },
+  "Naijiu:BracedMod": {
+    "TEXT": ["紧绷", "", "获得的 #y格挡 减少 #b33% 。 NL 打出本牌后，获得的 #y格挡 增加一定比率的数值。"],
+    "EXTRA_TEXT": [" NL 本场战斗本牌获得 格挡 增加 %s 。"]
+  },
+  "Naijiu:BrutalMod": {
+    "TEXT": ["残暴", "", "造成的伤害增加 #b33% 。 NL #y虚无 。"],
+    "EXTRA_TEXT": [" 虚无 。 NL "]
+  },
+  "Naijiu:BundledMod": {
+    "TEXT": ["捆绑", "", "本牌耗能为 #b0 。 NL 获得 #b2 张原卡牌的复制。 NL #y消耗。"],
+    "EXTRA_TEXT": ["增加2张 %s 到你的手牌。"," NL 消耗 。", " 固有 。 NL "]
+  },
+  "Naijiu:ChargedMod": {
+    "TEXT": ["充电", "", "获得的 #y格挡 减少 #b20% 。 NL 在下一回合获得 [E] 。"],
+    "EXTRA_TEXT": [" NL 在下一回合获得 [E] 。"]
+  },
+  "Naijiu:ClashyMod": {
+    "TEXT": ["交锋", "", "造成的伤害增加 #b100% 。 NL 只有在手牌每一张牌都是攻击牌时才能打出。"],
+    "EXTRA_TEXT": [ "只有在手牌每一张牌都是攻击牌时才能打出。 NL "]
+  },
+  "Naijiu:ClawfulMod": {
+    "TEXT": ["爪击", "",
+      "打击", "",
+      "造成的伤害减少 #b2 。 NL 打出本牌后，本场战斗所有的名字相同的牌伤害增加 #b2(+1) 。",
+      "造成的伤害减少 #b2 。 NL 打出本牌后，本场战斗所有的 #y打击 牌伤害增加 #b2(+1) 。"
+    ],
+    "EXTRA_TEXT": [" NL 本场战斗所有 %s 伤害增加 %s 。",
+      " NL 本场战斗所有 *打击 牌伤害增加 %s 。"]
+  },
+  "Naijiu:CultistMod": {
+    "TEXT": ["邪教", "", "造成的伤害减少 #b20% 。 NL 获得 #b1 点 #y力量 。"],
+    "EXTRA_TEXT": [" NL 获得 %d 点 力量。"]
+  },
+  "Naijiu:DemurMod": {
+    "TEXT": ["辩驳", "", "获得的 #y格挡 增加 #b100% 。 NL 只有在手牌每一张牌都是技能牌时才能打出。"],
+    "EXTRA_TEXT": ["只有在手牌每一张牌都是技能牌时才能打出。 NL "]
+  },
+  "Naijiu:DevotedMod": {
+    "TEXT": ["敬拜", "", "造成的伤害与获得的 #y格挡 减少 #b25% 。 NL 依据耗能获得一定的 #y真言 。"],
+    "EXTRA_TEXT": [" NL 获得 %d 层 真言 。"]
+  },
+  "Naijiu:DisposableMod": {
+    "TEXT": ["可处理的", "", "本牌耗能为 #b1 。 NL 允许你打出。"],
+    "EXTRA_TEXT": []
+  },
+  "Naijiu:DivergentMod": {
+    "TEXT": ["分歧", "", "造成的伤害与获得的 #y格挡 减少 #b50% 。 NL 打出本牌的一张复制。"],
+    "EXTRA_TEXT": [" NL Naijiu:回声 。"]
+  },
+  "Naijiu:DoomedMod": {
+    "TEXT": ["诅咒", "", "牌组里每有一张 #y诅咒 ，额外造成伤害。"],
+    "EXTRA_TEXT": [" NL 牌组里每有一张诅咒，额外造成 %d 伤害。"]
+  },
+  "Naijiu:DoubtfulMod": {
+    "TEXT": ["疑虑", "", "本牌耗能减少 #b1 。 NL 获得 #b2 层 #y虚弱 。"],
+    "EXTRA_TEXT": [" NL 获得 %d 层 虚弱 。"]
+  },
+  "Naijiu:DramaticMod": {
+    "TEXT": ["盛大", "", "造成的伤害与获得的 #y格挡 增加 #b50% 。 NL #y固有 。 NL #y消耗 。"],
+    "EXTRA_TEXT": [" 固有 。 NL ", " NL 消耗 。"]
+  },
+  "Naijiu:EchoMod": {
+    "TEXT": ["余音", "", "打出两次。 NL #y消耗 。"],
+    "EXTRA_TEXT": [" NL Naijiu:回声 。 NL 消耗 。"]
+  },
+  "Naijiu:ElectroMod": {
+    "TEXT": ["闪电", "", "造成的伤害减少 #b25% 。 #y生成 一个 #y闪电 充能球 。"],
+    "EXTRA_TEXT": [" NL 生成 %d 个 闪电 充能球。"]
+  },
+  "Naijiu:EndlessMod": {
+    "TEXT": ["无尽", "", "造成的伤害与获得的 #y格挡 减少 #b20% 。 NL 每当你抽到这张牌，增加一张其复制品到你的手牌。 NL #y消耗 。"],
+    "EXTRA_TEXT": [" NL 每当你抽到这张牌，增加1张其复制品到你的手牌。", " NL 消耗 。",
+      "Translator note: These strings are for replacing Endless Agony's description. The first string is what to search for, the second string replaces it.",
+      " NL 每当你抽到这张牌，都增加1张其复制品到你的手牌。",
+      " NL 每当你抽到这张牌，都增加2张其复制品到你的手牌。"]
+  },
+  "Naijiu:ErangMod": {
+    "TEXT": ["回旋镖", "回旋镖", "回旋镖","回旋镖","回旋镖", "造成的伤害减少 #b50% 。 NL 对随机敌人造成伤害 #b3 次。"],
+    "EXTRA_TEXT": [" 对随机敌人造成3次。"]
+  },
+  "Naijiu:EruptingMod": {
+    "TEXT": ["发泄", "", "进入 #y愤怒 。"],
+    "EXTRA_TEXT": [" NL 进入 愤怒 。"]
+  },
+  "Naijiu:ExplosiveMod": {
+    "TEXT": ["炸弹化", "", "本牌耗能增加 #b1 。 NL 在打出这张牌后第 #b3 回合开始时, 打出原牌的 #b5 张复制。"],
+    "EXTRA_TEXT": ["在打出这张牌后第3回合开始时，打出 %2$s 的 %1$s 张复制。", " 固有 。 NL "]
+  },
+  "Naijiu:FanaticMod": {
+    "TEXT": ["狂热", "", "造成的伤害增加 #b50% 。 NL #y消耗 。"],
+    "EXTRA_TEXT": [" NL 消耗 。"]
+  },
+  "Naijiu:FearfulMod": {
+    "TEXT": ["恐惧", "", "本牌耗能减少 #b2 。 NL 获得 #b1 层 #y易伤 。"],
+    "EXTRA_TEXT": [" NL 获得 %d 层 易伤 。"]
+  },
+  "Naijiu:FlexMod": {
+    "TEXT": ["活动", "","获得 #b3 点临时 #y力量 。"],
+    "EXTRA_TEXT": [ " NL 获得 %d 点 临时 力量 。"]
+  },
+  "Naijiu:FlyingMod": {
+    "TEXT": ["飞", "", "造成的伤害减少 #b20% 。 NL 在下一个回合获得 [E] 。"],
+    "EXTRA_TEXT": [" NL 在下一个回合获得 [E] 。"]
+  },
+  "Naijiu:FragileMod": {
+    "TEXT": ["易碎", "", "本牌耗能减少 #b1 。 NL #y消耗 。"],
+    "EXTRA_TEXT": [" NL 消耗 。"]
+  },
+  "Naijiu:FrostyMod": {
+    "TEXT": ["冰霜", "", "获得的 #y格挡 减少 #b25%。 NL #y生成 一个 #y冰霜 充能球。"],
+    "EXTRA_TEXT": [" NL 生成 %d 个 冰霜 充能球。"]
+  },
+  "Naijiu:FollowUpMod": {
+    "TEXT": ["追击", "", "造成的伤害减少 #b20% 。 NL 如果本场战斗中打出的上一张牌是攻击牌，获得 [E] 。"],
+    "EXTRA_TEXT": [" NL 如果本场战斗中打出的上一张牌是攻击牌，获得 [E] 。",
+      "Translator note: These strings are for replacing Follow-Up's description. The first string is what to search for, the second string replaces it.",
+      "如果本场战斗中打出的上一张牌是攻击牌，获得 [W]。",
+      "如果本场战斗中打出的上一张牌是攻击牌，获得 [W] [W]。"]
+  },
+  "Naijiu:FormMod": {
+    "TEXT": ["", "形态","本牌耗能为 #b3 。 NL 按比例增加本牌效果。"],
+    "EXTRA_TEXT": []
+  },
+  "Naijiu:ForOneMod": {
+    "TEXT": ["", "一心", "将弃牌堆中随机一张 #b0 耗能的牌放入你的手牌。"],
+    "EXTRA_TEXT": [" NL 将弃牌堆中随机1张0耗能的牌放入你的手牌。"]
+  },
+  "Naijiu:FusedMod": {
+    "TEXT": ["融合", "", "所有数值增加 #b33% 。 NL 不能被 #y升级 。"],
+    "EXTRA_TEXT": [" NL 不能被 升级。"]
+  },
+  "Naijiu:GhostlyMod": {
+    "TEXT": ["幽灵", "", "获得的 #y格挡 增加 #b33% 。 NL #y虚无 。"],
+    "EXTRA_TEXT": [" 虚无 。 NL "]
+  },
+  "Naijiu:GlassMod": {
+    "TEXT": ["玻璃", "", "造成的伤害增加 #b50% 。 NL 打出后其基础伤害减少 #b2 。"],
+    "EXTRA_TEXT": [" NL 这张牌每被打出一次，在本场战斗中其基础伤害减少2。",
+      "Translator note: These strings are for replacing Glass Knife's description. The first string is what to search for, the second string replaces it.",
+      "这张牌每被打出一次，在本场战斗中其基础伤害减少2。",
+      "这张牌每被打出一次，在本场战斗中其基础伤害减少4。"]
+  },
+  "Naijiu:GloomMod": {
+    "TEXT": ["黑暗", "", "造成的伤害与获得的 #y格挡 减少 #b25% 。 NL #y生成 一个 #y黑暗 充能球。"],
+    "EXTRA_TEXT": [" NL 生成 %d 个 黑暗 充能球."]
+  },
+  "Naijiu:GoForTheMod": {
+    "TEXT": ["预审", "", "造成的伤害减少 #b20% 。 NL 在打出本牌造成 #b3(+1) 伤害后，若敌人意图为攻击，触发原牌效果。"],
+    "EXTRA_TEXT": ["造成 %s 点伤害。 NL 如果敌人意图为攻击，"]
+  },
+  "Naijiu:GraveMod": {
+    "TEXT": ["墓地", "", "增加 #y墓地 。"],
+    "EXTRA_TEXT": [" NL 墓地 。"]
+  },
+  "Naijiu:GritMod": {
+    "TEXT": ["坚毅", "", "随机 #y消耗 一张手牌。 #y升级 后可选择 #y消耗 的牌。"],
+    "EXTRA_TEXT": [" NL 消耗 一张随机手牌。"," NL 消耗 一张手牌。"]
+  },
+  "Naijiu:GreedMod": {
+    "TEXT": ["贪婪", "","#y斩杀 时，获得 #b15(+5) #y金币。 NL #y消耗 。" ],
+    "EXTRA_TEXT": [" NL 斩杀 时，获得 %s 金币。 NL 消耗 。", " NL 斩杀 时，获得 %s 金币。"]
+  },
+  "Naijiu:HemoMod": {
+    "TEXT": ["御血", "", "造成的伤害与获得的 #y格挡 增加 #b50% 。 NL 失去 #b2 点生命。" ],
+    "EXTRA_TEXT": ["失去 %d 点生命. NL "]
+  },
+  "Naijiu:HeavyMod": {
+    "TEXT": ["重", "", "#y力量 在本牌上发挥 #b3 倍效果 。"],
+    "EXTRA_TEXT": [" NL 力量 在本牌上发挥 %d 倍效果。"]
+  },
+  "Naijiu:HolyMod": {
+    "TEXT": ["神圣", "", "本牌耗能增加 #b1 。 NL 打出时在你的手牌中加入一张 #y奇迹 。"],
+    "EXTRA_TEXT": [" NL 在你的手牌中加入一张 *奇迹 。"]
+  },
+  "Naijiu:InfiniteMod": {
+    "TEXT": ["无限", "", "在你的回合开始时，将一张原牌加入你的手牌。"],
+    "EXTRA_TEXT": ["在你的回合开始时，将一张 %s 加入你的手牌。", " 固有 。 NL "]
+  },
+  "Naijiu:InvertedMod": {
+    "TEXT": ["反转", "", "\"获得格挡\" 与 \"造成伤害\" 对换。" ],
+    "EXTRA_TEXT": ["获得 !B! 点 格挡 。","造成 !D! 点伤害。"]
+  },
+  "Naijiu:JankMod": {
+    "TEXT": ["辣鸡", "","交换卡牌上的两个数字的位置。"],
+    "EXTRA_TEXT": []
+  },
+  "Naijiu:LockingMod": {
+    "TEXT": ["锁定", "", "造成的伤害减少 #b20% 。 NL 给予 #b2 层 #y跟踪锁定 。"],
+    "EXTRA_TEXT": [" NL 给予 %d 层 跟踪锁定 。"]
+  },
+  "Naijiu:LuckyMod": {
+    "TEXT": ["幸运", "", "抽牌前 #y预见 #b1(+1) 。"],
+    "EXTRA_TEXT": [" 预见 %s 。 NL "]
+  },
+  "Naijiu:MasochisticMod": {
+    "TEXT": ["受虐", "", "每个你的负面效果额外获得 #b3 #y格挡 。"],
+    "EXTRA_TEXT": [" NL 每个你的负面效果额外获得3 格挡 。"]
+  },
+  "Naijiu:MassiveMod": {
+    "TEXT": ["笨重", "","本牌耗能增加 #b1 。 NL 按比例增加造成的伤害与获得的 #y格挡 。"],
+    "EXTRA_TEXT": []
+  },
+  "Naijiu:MasterfulMod": {
+    "TEXT": ["精巧", "", "本牌耗能减少 #b2 。 NL 你每次受到伤害，这张牌的耗能增加 #b1 。"],
+    "EXTRA_TEXT": [" NL 你每次受到伤害，这张牌的耗能增加1。"]
+  },
+  "Naijiu:MementoMod": {
+    "TEXT": ["", "的纪念物", "若被 #y消耗 ，抽 #b2 张牌。 NL #y虚无 。"],
+    "EXTRA_TEXT": [" 虚无 。 NL "," NL 若被 消耗 ，抽 %d 张牌。"]
+  },
+  "Naijiu:MeteorMod": {
+    "TEXT": ["陨石", "", "本牌耗能为 #b5 。 NL 每个额外耗能增加 #b25% 造成的伤害。 NL 每个额外耗能 #y生成 一个 #y等离子 充能球。"],
+    "EXTRA_TEXT": [" NL 生成 %d 个 等离子 充能球。"]
+  },
+  "Naijiu:MK2Mod": {
+    "TEXT": ["", " MK2","卡牌数值增加 #b20%."],
+    "EXTRA_TEXT": []
+  },
+  "Naijiu:MoxieMod": {
+    "TEXT": ["仪式", "", "#y斩杀 时，永久增加本牌伤害 #b2 点。 NL #y消耗 。"],
+    "EXTRA_TEXT": [" NL 斩杀 时，永久增加本牌伤害 %d 点。 NL 消耗 。"]
+  },
+  "Naijiu:NoxiousMod": {
+    "TEXT": ["泛毒", "", " 给予所有敌人 #b2 层 #y中毒 。"],
+    "EXTRA_TEXT": [" NL 给予所有敌人 %d 层 中毒 。"]
+  },
+  "Naijiu:NuclearMod": {
+    "TEXT": ["离子化", "", "本牌耗能增加 #b1 。 NL #y生成 一个 #y等离子 充能球。"],
+    "EXTRA_TEXT": [" NL 生成 %d 等离子 充能球 。"]
+  },
+  "Naijiu:PerniciousMod": {
+    "TEXT": ["恶毒", "","造成的伤害减少 #b50% 。 NL 给予等同于未被 #y格挡 的伤害点数层数的 #y中毒 。" ],
+    "EXTRA_TEXT": [" NL 给予等同于未被格挡的伤害点数层数的 中毒 。"]
+  },
+  "Naijiu:PhilosophersMod": {
+    "TEXT": ["哲理化", "", "本牌耗能减少 #b1 。 NL 所有敌人获得 #b1点 #y力量 。"],
+    "EXTRA_TEXT": [" NL 所有敌人获得1点 力量 。"]
+  },
+  "Naijiu:PiercingMod": {
+    "TEXT": ["穿刺", "", "无视 #y格挡 。"],
+    "EXTRA_TEXT": [" NL 无视 格挡 。"]
+  },
+  "Naijiu:PoisonedMod": {
+    "TEXT": ["带毒", "", "造成的伤害减少 #b2 。 NL 给予 #b2(+1) 层 #y中毒 。"],
+    "EXTRA_TEXT": [" NL 给予 %s 层 中毒 。"]
+  },
+  "Naijiu:PredatoryMod": {
+    "TEXT": ["猎杀", "", "本牌耗能增加 #b1 。 NL 造成的伤害增加 #b33% 。 NL 下回合多抽 #b2 张牌。"],
+    "EXTRA_TEXT": [ " NL 下一回合多抽 %d 张牌。",
+      "Translator note: These strings are for replacing Predator's description. The first string is what to search for, the second string replaces it.",
+      "下一回合多抽2张牌。",
+      "下一回合多抽4张牌。"]
+  },
+  "Naijiu:PreparedMod": {
+    "TEXT": ["准备", "", "抽一张牌，弃一张牌。"],
+    "EXTRA_TEXT": [" NL 抽 %d 张牌。 NL 弃 %d 张牌。"]
+  },
+  "Naijiu:PureMod": {
+    "TEXT": ["净化", "", "#y消耗 手牌中所有的 #y状态牌 与 #y诅咒 。"],
+    "EXTRA_TEXT": [" NL 消耗 手牌中所有的 状态牌 与 诅咒 。"]
+  },
+  "Naijiu:QuickMod": {
+    "TEXT": ["快速", "", "造成的伤害减少 #b20% 。 NL 抽 #b1 张牌 。"],
+    "EXTRA_TEXT": [" NL 抽 %d 张牌。"]
+  },
+  "Naijiu:RampedMod": {
+    "TEXT": ["暴走", "", "造成的伤害减少 #b33% 。 NL 打出时按一定比例增加伤害 。"],
+    "EXTRA_TEXT": [" NL 增加本牌在本场战斗中的伤害 %s 点。"]
+  },
+  "Naijiu:ReshuffleMod": {
+    "TEXT": ["回返", "", "打出本牌后，将本牌洗入抽牌堆。"],
+    "EXTRA_TEXT": [" NL Naijiu:再洗入 。"]
+  },
+  "Naijiu:ReturningMod": {
+    "TEXT": ["萦绕", "", "本牌耗能为 #b0 。 NL 允许你打出。 NL 打出本牌后，将本牌洗入抽牌堆。"],
+    "EXTRA_TEXT": [" NL Naijiu:再洗入 。"]
+  },
+  "Naijiu:RollMod": {
+    "TEXT": ["", "翻滚", "获得的 #y格挡 减少 #b33% 。 NL 下回合获得 #y格挡 。"],
+    "EXTRA_TEXT": [" NL 下一回合获得 !B! 点 格挡 。"]
+  },
+  "Naijiu:RunicMod": {
+    "TEXT": ["符文化", "", "本牌耗能减少 #b1 。 NL 下 #b2 个回合内你无法看见敌方意图。"],
+    "EXTRA_TEXT": [" NL 下 %d 个回合内你无法看见敌方意图。"]
+  },
+  "Naijiu:SadisticMod": {
+    "TEXT": ["施虐", "", "敌人每有一种负面效果，造成 #b3 点额外伤害。"],
+    "EXTRA_TEXT": [" NL 敌人每有一种负面效果，造成 %d 点额外伤害。"]
+  },
+  "Naijiu:SanctifiedMod": {
+    "TEXT": ["圣洁", "", "若本场战斗上一张打出的牌是技能牌，抽 #b2 张牌。"],
+    "EXTRA_TEXT": [" NL 若本场战斗上一张打出的牌是技能牌，抽 %d 张牌。"]
+  },
+  "Naijiu:ShamefulMod": {
+    "TEXT": ["羞耻", "", "本牌耗能减少 #b1 。 NL 获得 #b2 层 #y脆弱 。"],
+    "EXTRA_TEXT": [" NL 获得 %d 层 脆弱 。"]
+  },
+  "Naijiu:SearingMod": {
+    "TEXT": ["灼热", "", "能被多次 #y升级 。"],
+    "EXTRA_TEXT": [" NL 能被多次 升级 。"]
+  },
+  "Naijiu:ShieldedMod": {
+    "TEXT": ["盾化", "", "本牌耗能增加 #b1 。 NL 给予 #b7(+3) 点 #y格挡 。"],
+    "EXTRA_TEXT": ["获得 %s 点 格挡 。 NL "]
+  },
+  "Naijiu:ShiningMod": {
+    "TEXT": ["闪光", "", "抽到本牌时获得 [E] 。 NL #y虚无 。"],
+    "EXTRA_TEXT": [" 虚无 。 NL "," NL 抽到本牌时获得 [E] 。"]
+  },
+  "Naijiu:ShivMod": {
+    "TEXT": ["", "与匕首", "获得的 #y格挡 减少 #b20% 。 NL 增加 #b1 张 #y小刀 到你的手牌。"],
+    "EXTRA_TEXT": [" NL 增加 %d 张 *小刀 到你的手牌。"]
+  },
+  "Naijiu:SignatureMod": {
+    "TEXT": ["招牌", "", "造成的伤害增加 #b75% 。 NL 仅当本牌为你手中唯一一张攻击牌时可打出。"],
+    "EXTRA_TEXT": ["仅当本牌为你手中唯一一张攻击牌时可打出。 NL "]
+  },
+  "Naijiu:SlaverMod": {
+    "TEXT": ["奴性", "", "在首领与精英战中耗能减少 [E] 。"],
+    "EXTRA_TEXT": [" NL 在首领与精英战中耗能减少 [E] 。"]
+  },
+  "Naijiu:SlayerMod": {
+    "TEXT": ["凶狠", "", "造成的伤害减少 #b25% 。 NL 对场上生命值最低的敌人造成双倍伤害。"],
+    "EXTRA_TEXT": [" NL 对场上生命值最低的敌人造成双倍伤害。"]
+  },
+  "Naijiu:SlipperyMod": {
+    "TEXT": ["滑溜", "", "卡牌数值增加 #b50% 。 NL 当本牌于本次战斗中第一次被抽到时，丢弃本牌。"],
+    "EXTRA_TEXT": [" NL 当本牌于本次战斗中第一次被抽到时，丢弃本牌。"]
+  },
+  "Naijiu:SluggerMod": {
+    "TEXT": ["猛击", "", "对所有敌人造成 #b6(+3) 伤害。 NL #y消耗 。"],
+    "EXTRA_TEXT": [" NL 对所有敌人造成 %s 伤害。", " NL 对所有敌人造成 %s 伤害。 NL 消耗 。"]
+  },
+  "Naijiu:SneckoMod": {
+    "TEXT": ["混乱", "", "抽到时随机耗能。"],
+    "EXTRA_TEXT": ["耗能随机。 NL "]
+  },
+  "Naijiu:StickyMod": {
+    "TEXT": ["黏性", "", "增加 #y保留 。"],
+    "EXTRA_TEXT": [" 保留 。 NL "]
+  },
+  "Naijiu:StreamlinedMod": {
+    "TEXT": ["精简", "", "本牌耗能增加 #b1 。 NL 造成的伤害与获得的格挡增加 #b33% 。 NL 打出时减少本牌在本场战斗中的耗能1点。"],
+    "EXTRA_TEXT": [" NL 减少本牌在本场战斗中的耗能1点。"]
+  },
+  "Naijiu:SuckerMod": {
+    "TEXT": ["突然", "", "造成的伤害减少 #b20% 。 NL 给予 #b1 层 #y虚弱 。"],
+    "EXTRA_TEXT": [" NL 给予 %d 层 虚弱 。"]
+  },
+  "Naijiu:SupplyMod": {
+    "TEXT": ["先机", "", "本牌耗能增加 #b1 。 NL 下一回合获得 [E] [E] 。"],
+    "EXTRA_TEXT": [" NL 下一回合获得 [E] [E] 。"]
+  },
+  "Naijiu:SurgeMod": {
+    "TEXT": ["", "电涌", "获得 #b1 层 #y人工制品。 NL #y消耗 。"],
+    "EXTRA_TEXT": [" NL 获得 %d 层 人工制品 。 NL 消耗 。"]
+  },
+  "Naijiu:SurvivorMod": {
+    "TEXT": ["生存者", "", "获得的 #y格挡 增加 #b33% 。 NL 弃 #b1 张牌。"],
+    "EXTRA_TEXT": [" NL 弃 %d 张牌。"]
+  },
+  "Naijiu:SwivelMod": {
+    "TEXT": ["旋身", "", "本牌耗能增加 #b1 。 NL 你打出的下一张攻击牌耗能变为 #b0 。"],
+    "EXTRA_TEXT": [" NL 你打出的下一张攻击牌耗能变为0。"]
+  },
+  "Naijiu:TearMod": {
+    "TEXT": ["", "撕扯", "造成的伤害减少 #b33% 。 NL 额外攻击一名随机敌人。"],
+    "EXTRA_TEXT": [" NL 随机对一名敌人造成 !D! 点伤害。"]
+  },
+  "Naijiu:TinyMod": {
+    "TEXT": ["精小", "", "本牌耗能减少 #b1 。 NL 造成的伤害与获得的 #y格挡 减少 #b33% 。"],
+    "EXTRA_TEXT": []
+  },
+  "Naijiu:TwinMod": {
+    "TEXT": ["双重", "", "本牌耗能增加 #b1 。 NL 生效两次 。"],
+    "EXTRA_TEXT": [" NL 生效两次。"]
+  },
+  "Naijiu:VanishingMod": {
+    "TEXT": ["消逝", "", "卡牌数值增加 #b33% 。 NL 一旦在战斗中失去生命， #y消耗 本牌。"],
+    "EXTRA_TEXT": [" NL 一旦在战斗中失去生命， 消耗 本牌。"]
+  },
+  "Naijiu:VoidMod": {
+    "TEXT": ["预支", "", "本牌耗能减少 #b2 。 NL 将一张 #y虚空 洗入抽牌堆 。"],
+    "EXTRA_TEXT": [" NL 将 %d 张 *虚空 洗入抽牌堆。"]
+  },
+  "Naijiu:VoidingMod": {
+    "TEXT": ["虚空", "", "抽到这张牌时失去 [E] 。 NL #y虚无 。"],
+    "EXTRA_TEXT": [" 虚无 。 NL ", " NL 抽到这张牌时失去1点能量。"]
+  },
+  "Naijiu:WallopMod": {
+    "TEXT": ["当头", "", "本牌耗能增加 #b1 。 NL 获得与所造成的未被格挡的伤害相等的 #y格挡 。"],
+    "EXTRA_TEXT": [" NL 获得与所造成的未被格挡的伤害相等的 格挡 。"]
+  },
+  "Naijiu:WaveMod": {
+    "TEXT": ["", "铁斩波", "造成的伤害减少 #b50% 。 NL 获得与失去的伤害等量的 #y格挡 。"],
+    "EXTRA_TEXT": ["获得 %s 点 格挡 。 NL "]
+  },
+  "Naijiu:XMod": {
+    "TEXT": ["", " X", "本牌耗能为 #bX 且生效X次。"],
+    "EXTRA_TEXT": [" NL 生效X次。"]
+  }
+}
+

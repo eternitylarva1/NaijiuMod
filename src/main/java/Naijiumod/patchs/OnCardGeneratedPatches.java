@@ -1,3 +1,4 @@
+
 package Naijiumod.patchs;
 
 
@@ -64,11 +65,11 @@ public class OnCardGeneratedPatches {
   }
   public static void addModifier(AbstractCard c){
 
-      CardModifierManager.addModifier(c, new ItemMod(getCardnaijiu(c)));
+      CardModifierManager.addModifier(c, new ItemMod(getCardnaijiu(c),0));
 
   }
   
-  
+
   @SpirePatch2(clz = CombatRewardScreen.class, method = "setupItemReward")
   public static class ModifyRewardScreenStuff {
     @SpirePostfixPatch
@@ -132,7 +133,7 @@ addModifier(c);
         }
     }
   }
-  
+
   @SpirePatch2(clz = GremlinMatchGame.class, method = "initializeCards")
   public static class ModifyMatchGameCards {
     @SpireInsertPatch(locator = Locator.class, localvars = {"retVal"})
@@ -150,7 +151,7 @@ addModifier(c);
       }
     }
   }
-  
+
   @SpirePatch2(clz = NeowReward.class, method = "getRewardCards")
   public static class ModifyNeowRewardCardsPatch {
     @SpirePostfixPatch
@@ -344,7 +345,7 @@ addModifier(c);
 addModifier(card);
         }
 
-      } 
+      }
     }
   }
   

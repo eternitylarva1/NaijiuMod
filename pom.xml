@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 改成你需要的名称 -->
-    <groupId>Naijiu</groupId>
+    <groupId>Naijiumod</groupId>
     <!-- 改成你需要的名称 -->
-    <artifactId>Naijiu</artifactId>
+    <artifactId>Naijiumod</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <!-- 改成你需要的名称 -->
-    <name>Naijiu</name>
+    <name>Naijiumod</name>
     <!-- 改不改由你 -->
     <description>a sts mod.</description>
 

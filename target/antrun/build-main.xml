@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="maven-antrun-" default="main"  >
 <target name="main">
-  <copy file="target/Naijiu.jar" tofile="C:\Program Files (x86)\steam\steamapps/common/SlayTheSpire/mods/Naijiu.jar"/>
+  <copy file="target/Naijiumod.jar" tofile="C:\Program Files (x86)\steam\steamapps/common/SlayTheSpire/mods/Naijiumod.jar"/>
 </target>
 </project>

@@ -17,6 +17,7 @@ public class MyModConfig extends EasyConfigPanel {
     }
     public static String Description="";
     public static int Rare=6;
+    public static int Damo=8;
     public static int UnCommon = 5;
     public static int Common = 4;
     public static int Other = 3;

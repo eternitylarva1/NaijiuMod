@@ -2,17 +2,29 @@ package Naijiumod.hook;
 
 
 
+import Naijiumod.cardModifier.AbstractAugment;
+import Naijiumod.cardModifier.ItemMod;
+import Naijiumod.screens.MyScreen;
+import Naijiumod.ui.FumoEffect;
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardModifierManager;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
+import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 加载遗物 用于在游戏中注入你修改的内容
@@ -22,7 +34,7 @@ import org.apache.logging.log4j.Logger;
  **/
 @SpireInitializer
 @SuppressWarnings("unused")
-public class LoadMySpireMod implements PostInitializeSubscriber,EditCardsSubscriber,PostDungeonUpdateSubscriber,StartActSubscriber,PostDungeonInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber {
+public class LoadMySpireMod implements OnStartBattleSubscriber,PostInitializeSubscriber,EditCardsSubscriber,PostDungeonUpdateSubscriber,StartActSubscriber,PostDungeonInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber {
     /**
      * 日志对象 用来输出日志 指定本类 LoadMyEasyMod 以确认日志的输出对象
      */
@@ -78,7 +90,16 @@ public class LoadMySpireMod implements PostInitializeSubscriber,EditCardsSubscri
         receiveJson("UI", "uistrings.json", UIStrings.class);
 
     }
-    
+    public static final ArrayList<AbstractAugment> commonMods = new ArrayList<>();
+
+    public static final ArrayList<AbstractAugment> uncommonMods = new ArrayList<>();
+
+    public static final ArrayList<AbstractAugment> rareMods = new ArrayList<>();
+
+    public static final ArrayList<AbstractAugment> specialMods = new ArrayList<>();
+
+    public static final HashMap<String, AbstractAugment> modMap = new HashMap<>();
+    public static MyScreen gridCardSelectScreen1 ;
     /**
      * 加载json文件
      *
@@ -94,10 +115,11 @@ public class LoadMySpireMod implements PostInitializeSubscriber,EditCardsSubscri
         } else {
             lang = "ENG/"; // 如果没有相应语言的版本，默认加载英语
         }
-        String relicStrings = Gdx.files.internal("localization/" +lang+ jsonFileName).readString("UTF-8");
+        String relicStrings = Gdx.files.internal("NaijiuModResources/localization/" +lang+ jsonFileName).readString("UTF-8");
         BaseMod.loadCustomStrings(className, relicStrings);
         logger.info(">>>加载[{}]的json文件结束<<<", typeInfo);
     }
+
     
     /**
      * 根据遗物id添加给当前人物遗物 如果没有则添加，已有会忽略
@@ -138,9 +160,53 @@ public class LoadMySpireMod implements PostInitializeSubscriber,EditCardsSubscri
 
     @Override
     public void receivePostInitialize() {
-        BaseMod.registerModBadge(ImageMaster.loadImage("localization/relics/bell.png"),ModID,"Dieyou", "耐久决定方式:稀有度基数*卡牌类型基数。下方可以调整对应的基数", new MyModConfig());
-
+        BaseMod.registerModBadge(ImageMaster.loadImage("NaijiuModResources/localization/relics/bell.png"),ModID,"Dieyou", "耐久决定方式:稀有度基数*卡牌类型基数。下方可以调整对应的基数", new MyModConfig());
+        (new AutoAdd(ModID))
+                .packageFilter("CardAugments.cardmods")
+                .any(AbstractAugment.class, (info, abstractAugment) -> registerAugment(abstractAugment, ModID));
+        logger.info("Done loading card mods");
+        gridCardSelectScreen1 = new MyScreen();
+      BaseMod.addCustomScreen(gridCardSelectScreen1);
     }
 
+    public static void registerAugment(AbstractAugment a, String modID) {
+        if (!a.identifier(null).equals("")) {
+            modMap.put(a.identifier(null), a);
+        } else {
+            logger.warn("Augment " + a + " does not set an identifier, Chimera Cards can not add this mod via console commands!");
+        }
+        switch (a.getModRarity()) {
+            case COMMON:
+                commonMods.add(a);
+                break;
+            case UNCOMMON:
+                commonMods.add(a);
+                break;
+            case RARE:
+                uncommonMods.add(a);
+                break;
+            case SPECIAL:
+                specialMods.add(a);
+                break;
+        }
+    }
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+
+          for (AbstractCard card:AbstractDungeon.player.drawPile.group)
+          {
+              if(StSLib.getMasterDeckEquivalent(card)!=null){
+                  if(CardModifierManager.hasModifier(card,ItemMod.ID)){
+                       ItemMod itemMod = (ItemMod)CardModifierManager.getModifiers(card, ItemMod.ID).get(0);
+                       ItemMod itemMod1 = (ItemMod)CardModifierManager.getModifiers(StSLib.getMasterDeckEquivalent(card), ItemMod.ID).get(0);
+                       itemMod.uses=itemMod1.uses;
+                       card.initializeDescription();
+                       itemMod.damo  = itemMod1.damo;
+                       card.initializeDescription();
+
+                  }
+              }
+          }
+        }
 
 }
