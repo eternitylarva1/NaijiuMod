@@ -1,6 +1,7 @@
 package Naijiumod.screens;
 
 import Naijiumod.cardModifier.ItemMod;
+import Naijiumod.hook.LoadMySpireMod;
 import basemod.abstracts.CustomScreen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -287,8 +288,7 @@ public class MyScreen extends CustomScreen implements ScrollBarListener
             if (this.forTransform) {
                 this.ritualAnimTimer -= Gdx.graphics.getDeltaTime();
                 if (this.ritualAnimTimer < 0.0F) {
-                    AbstractCard card = ItemMod.addTrueRandomModifier(this.hoveredCard.makeStatEquivalentCopy());
-                    this.upgradePreviewCard = card;
+                    this.upgradePreviewCard = ItemMod.addTrueRandomModifier(this.hoveredCard.makeStatEquivalentCopy());
                     this.ritualAnimTimer = 0.1F;
                 }
             }
@@ -795,6 +795,7 @@ public class MyScreen extends CustomScreen implements ScrollBarListener
 
     @Override
     public void close() {
+        System.out.println(LoadMySpireMod.gridCardSelectScreen1.selectedCards);
         AbstractDungeon.isScreenUp = false;
         AbstractDungeon.overlayMenu.proceedButton.show();
         AbstractDungeon.overlayMenu.showCombatPanels();

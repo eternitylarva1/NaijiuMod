@@ -1,0 +1,60 @@
+{
+  "mojichimera:LosePowerPower": {
+    "NAME": " Down",
+    "DESCRIPTIONS": ["At the end of this turn, lose #b", " #y", "."]
+  },
+  "mojichimera:BiasedPower": {
+    "NAME": "Biased ",
+    "DESCRIPTIONS": ["At the start of each turn, lose #b", " #y", ". Lasts #b", " turn.", " turns."]
+  },
+  "mojichimera:NextTurnStartPlayPower": {
+    "NAME": "Prepared ",
+    "DESCRIPTIONS": [
+      "In #b%1$s turns, play #b%2$s copyreplace of %3$s at the start of your turn.",
+      "At the start of next turn, play #b%1$s copyreplace of %2$s."
+    ]
+  },
+  "mojichimera:NextTurnAddToHandPower": {
+    "NAME": " Mass Production",
+    "DESCRIPTIONS": [
+      "In #b%1$s turns, add #b%2$s copyreplace of %3$s to your hand.",
+      "At the start of next turn, add #b%1$s copyreplace of %2$s to your hand."
+    ]
+  },
+  "mojichimera:SteelizePower": {
+    "NAME": "Steelize",
+    "DESCRIPTIONS": ["Increase card values by #b%2$s%% for the next #b%1$s cardreplace played this turn."]
+  },
+  "mojichimera:HeatsinksProtocolPower": {
+    "NAME": "Heatsinks Protocol",
+    "DESCRIPTIONS": ["Whenever you play a Power, play #b%1$s copyreplace of %2$s."]
+  },
+  "mojichimera:DarkProtocolPower": {
+    "NAME": "Dark Protocol",
+    "DESCRIPTIONS": ["Whenever you Exhausts a card, play #b%1$s copyreplace of %2$s."]
+  },
+  "mojichimera:RushdownProtocolPower": {
+    "NAME": "Rushdown Protocol",
+    "DESCRIPTIONS": ["Whenever you enters Wrath, play #b%1$s copyreplace of %2$s."]
+  },
+  "mojichimera:ThornsProtocolPower": {
+    "NAME": "Thorns Protocol",
+    "DESCRIPTIONS": ["Whenever you are attacked, play #b%1$s copyreplace of %2$s back."]
+  },
+  "mojichimera:FireBreathingProtocolPower": {
+    "NAME": "Fire Breathing Protocol",
+    "DESCRIPTIONS": ["Whenever you draw a Status or Curse card, play #b%1$s copyreplace of %2$s."]
+  },
+  "mojichimera:SadisticProtocolPower": {
+    "NAME": "Sadistic Protocol",
+    "DESCRIPTIONS": ["Whenever you apply a debuff to an enemy, play #b%1$s copyreplace of %2$s. Cannot be triggered recursively."]
+  },
+  "mojichimera:FreePower": {
+    "NAME": "Free ",
+    "DESCRIPTIONS": ["At the start of your turn, play #b%1$s copyreplace of %2$s."]
+  },
+  "mojichimera:EveryTurnStartPlayPower": {
+    "NAME": "Free ",
+    "DESCRIPTIONS": ["At the start of your turn, play #b%1$s copyreplace of %2$s."]
+  }
+}

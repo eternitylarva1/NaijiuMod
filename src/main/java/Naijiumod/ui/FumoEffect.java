@@ -5,12 +5,14 @@
 
 package Naijiumod.ui;
 
+import Naijiumod.cardModifier.AbstractAugment;
 import Naijiumod.cardModifier.ItemMod;
 import Naijiumod.helpers.ModHelper;
 import Naijiumod.hook.LoadMySpireMod;
 import Naijiumod.hook.MyModConfig;
 
 import Naijiumod.utils.Invoker;
+import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -40,13 +42,14 @@ import java.util.ArrayList;
 public class FumoEffect extends AbstractGameEffect {
 
     public static final String[] TEXT;
-    private static final float DUR = 1.5F;
+    private static final float DUR = 2.5F;
     private boolean openedScreen = false;
+    private boolean openedScreen2 = false;
     private Color screenColor;
 
     public FumoEffect() {
         this.screenColor = AbstractDungeon.fadeColor.cpy();
-        this.duration = 1.5F;
+        this.duration = 2.0F;
         this.screenColor.a = 0.0F;
         AbstractDungeon.overlayMenu.proceedButton.hide();
     }
@@ -59,15 +62,23 @@ public class FumoEffect extends AbstractGameEffect {
 
 
 
-        if (!AbstractDungeon.isScreenUp && ! LoadMySpireMod.gridCardSelectScreen1.selectedCards.isEmpty()) {
+        if (!AbstractDungeon.isScreenUp && ! LoadMySpireMod.gridCardSelectScreen1.selectedCards.isEmpty()&&!  LoadMySpireMod.gridCardSelectScreen2.selectedCards.isEmpty()) {
 
 
 
             for(AbstractCard c :   LoadMySpireMod.gridCardSelectScreen1.selectedCards) {
+                if(LoadMySpireMod.gridCardSelectScreen2.selectedCards.isEmpty()){
+                    LoadMySpireMod.gridCardSelectScreen1.selectedCards.clear();
+                    return;
+                }
                 AbstractDungeon.effectsQueue.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                 ++CardCrawlGame.metricData.campfire_upgraded;
                 CardCrawlGame.metricData.addCampfireChoiceData("SMITH", c.getMetricID());
-             ItemMod.addRandomModifier(c);
+
+                ArrayList<AbstractCardModifier> mods =CardModifierManager.modifiers(LoadMySpireMod.gridCardSelectScreen2.selectedCards.get(0));
+             for (AbstractCardModifier mod : mods) {
+                 CardModifierManager.addModifier(c, mod);
+             }
              ItemMod itemMod = (ItemMod)CardModifierManager.getModifiers(c, ItemMod.ID).get(0);
                 itemMod.damo=0;
                 c.initializeDescription();
@@ -75,10 +86,11 @@ public class FumoEffect extends AbstractGameEffect {
             }
 
               LoadMySpireMod.gridCardSelectScreen1.selectedCards.clear();
+            LoadMySpireMod.gridCardSelectScreen2.selectedCards.clear();
             ((RestRoom)AbstractDungeon.getCurrRoom()).fadeIn();
         }
 
-        if (this.duration < 1.0F && !this.openedScreen) {
+        if (this.duration < 2.0F && !this.openedScreen) {
             CardGroup cardGroup=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for(AbstractCard c: AbstractDungeon.player.masterDeck.group){
                 if(CardModifierManager.hasModifier(c, ItemMod.ID)){
@@ -90,7 +102,25 @@ public class FumoEffect extends AbstractGameEffect {
             }
             this.openedScreen = true;
       
-              LoadMySpireMod.gridCardSelectScreen1.open(cardGroup, 1, TEXT[3], true, true, true, false);
+              LoadMySpireMod.gridCardSelectScreen1.open(cardGroup, 1, TEXT[3], false, false, true, true);
+/*
+            for(AbstractRelic r : AbstractDungeon.player.relics) {
+                r.onSmith();
+            }*/
+        }
+        if (this.duration < 1.0F && !this.openedScreen2&&this.openedScreen) {
+            if(LoadMySpireMod.gridCardSelectScreen1.selectedCards.isEmpty()){
+                this.openedScreen2 = true;
+
+                return;
+            }
+            CardGroup cardGroup=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            for(int i=0;i < 3;i++) {
+                cardGroup.addToTop(ItemMod.addRandomModifier(LoadMySpireMod.gridCardSelectScreen1.selectedCards.get(0).makeStatEquivalentCopy()));
+            }
+            this.openedScreen2 = true;
+
+            LoadMySpireMod.gridCardSelectScreen2.open(cardGroup, 1, TEXT[4], false, false, true, true);
 /*
             for(AbstractRelic r : AbstractDungeon.player.relics) {
                 r.onSmith();

@@ -1,0 +1,668 @@
+{
+    "mojichimera:AugmentTemplate": {
+        "TEXT": ["Prefix", "Suffix", "Description stuff"],
+        "EXTRA_TEXT": ["Tooltip"]
+    },
+    "mojichimera:AccursedMod": {
+        "TEXT": ["Accursed ", "", "Reduces cost by [E] if your deck contains #yCurse cards."],
+        "EXTRA_TEXT": [" NL Reduces cost by [E] if your deck contains Curse cards."]
+    },
+    "mojichimera:AdHocMod": {
+        "TEXT": ["Ad Hoc ", "", "Increases card values by #b100%. NL Decreases by #b50% of base values each act."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:AfterlifeMod": {
+        "TEXT": ["Afterlife ", "", "Adds #yEthereal. NL When #yExhausted, triggers effects upon playing."],
+        "EXTRA_TEXT": [" NL When exhausted, trigger effects upon playing."]
+    },
+    "mojichimera:BelligerentMod": {
+        "TEXT": ["Belligerent ", "", "If the target intends to attack, increases damage by #b25%."],
+        "EXTRA_TEXT": [" NL If the target intends to attack, increases damage by %d%%."]
+    },
+    "mojichimera:BiasedMod": {
+        "TEXT": ["Biased ", "", "Increases card values by #b200%. Loses #b33% of the effect at the start of the next #b3 turns."],
+        "EXTRA_TEXT": [" NL At the start of the next %d turns, lose %d%% of the effect."]
+    },
+    "mojichimera:BiteMod": {
+        "TEXT": ["Bite ", "", "Reduces damage by #b33%. NL Heals #b2(+1) HP."],
+        "EXTRA_TEXT": [" NL Heal %s HP."]
+    },
+    "mojichimera:BondMod": {
+        "TEXT": ["Bond ", "", "Increases magic number by #b1 for every #b3(2) unique #ybuffs you have, rounded up."],
+        "EXTRA_TEXT": [" NL For every %d unique buffs you have, increases magic number by %d."]
+    },
+    "mojichimera:CatalystMod": {
+        "TEXT": ["", " Catalyst", "Increases cost by #b1. NL Multiplies all enemies' #yPoison by #b200%."],
+        "EXTRA_TEXT": [" NL Multiplies all enemies' Poison by %d%%."]
+    },
+    "mojichimera:ChargeMod": {
+        "TEXT": ["Chargeable ", "", "Increases card values by #b20% for each card of the same type played while in hand. Resets after each play."],
+        "EXTRA_TEXT": [
+            " NL While in hand, for each %s card played, increases card values by %d%%. Resets after each play.",
+            "Attack",
+            "Skill"
+        ]
+    },
+    "mojichimera:CompileMod": {
+        "TEXT": ["Compiling ", "", "Draw #b1 card for each unique Orb you have."],
+        "EXTRA_TEXT": [
+            " NL Draw %d card for each unique Orb you have.",
+            " NL Draw %d cards for each unique Orb you have.",
+            " NL Draw !M! card for each unique Orb you have."
+        ]
+    },
+    "mojichimera:ConfrontingMod": {
+        "TEXT": ["Confronting ", "", "Increases card values by #b50% in Boss and elite combats."],
+        "EXTRA_TEXT": [" NL Increases card values by %d%% in Boss and elite combats."]
+    },
+    "mojichimera:CorruptedMod": {
+        "TEXT": ["Corrupted ", "", "Plays #b4 more times. NL Gives #b2 #yVulnerable, #yWeak, and #yFrail. NL Shuffles #b1 copy of #yDazed, #ySlimed, #yWound, #yBurn, and #yVoid each into your draw pile."],
+        "EXTRA_TEXT": [" NL Plays %d more times. NL The Corrupt Hearts await you."]
+    },
+    "mojichimera:EmbraceMod": {
+        "TEXT": ["", " Embrace", "Becomes a #yPower. NL Reduces damage and #yBlock by #b67%. NL Whenever you #yExhaust a card, plays a copy of the original card."],
+        "EXTRA_TEXT": ["Whenever you Exhaust a card: NL "]
+    },
+    "mojichimera:ForesightMod": {
+        "TEXT": ["Foresight ", "", "Increases cost by #b1. NL Reduces cost of drawn cards by #b1 this turn."],
+        "EXTRA_TEXT": [" NL Reduce cost of drawn cards by %d this turn."]
+    },
+    "mojichimera:FutureMod": {
+        "TEXT": ["Future ", "", "Sets cost to #b0. NL Shuffles a #yPromise with the original cost into your draw pile."],
+        "EXTRA_TEXT": [" NL Shuffles a *Promise with cost %d into your draw pile."]
+    },
+    "mojichimera:GluttonousMod": {
+        "TEXT": ["Gluttonous ", "", "When first played, #bRandomly #yExhausts a card. NL Plays the exhausted card upon each play including the first. NL Can only choose playable Attack or Skill cards as the target."],
+        "EXTRA_TEXT": [" NL When first played, randomly exhausts a card, and plays it upon each play.", " NL Plays *%s ."]
+    },
+    "mojichimera:HeatsinksMod": {
+        "TEXT": ["Heatsinks ", "", "Increases cost by #b1. NL Becomes a #yPower. NL Whenever you play a #yPower card, plays a copy of the original card."],
+        "EXTRA_TEXT": ["Whenever you play a Power card: NL "]
+    },
+    "mojichimera:HumilityMod": {
+        "TEXT": ["Humility ", "", "Reduces damage by #b33%. NL Gives #bVigor equal to unblocked damage."],
+        "EXTRA_TEXT": [" NL Gains Vigor equal to unblocked damage."]
+    },
+    "mojichimera:ImminentMod": {
+        "TEXT": ["Imminent ", "", "Adds #yEthereal. NL When #yExhausted, gives #b1 #yStrength and #yDexterity."],
+        "EXTRA_TEXT": ["Ethereal. NL ", " NL When exhausted, gain %d Strength and Dexterity."]
+    },
+    "mojichimera:KyrieMod": {
+        "TEXT": ["Kyrie ", "", "The higher the enemy's current HP percentage, the more damage you deal, up to #b175%."],
+        "EXTRA_TEXT": [" NL The higher the enemy's current HP percentage, the more damage you deal."]
+    },
+    "mojichimera:LimitlessMod": {
+        "TEXT": ["Limitless ", "", "Reduces card values by #b50%. NL Increases by #b3% of base values each floor."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:LoyaltyMod": {
+        "TEXT": ["", " Loyalty Card", "Every #b3rd time this card is manually played, plays #b1 more time."],
+        "EXTRA_TEXT": [" NL Every %drd time this card is manually played, plays %d more time."]
+    },
+    "mojichimera:OverlookingMod": {
+        "TEXT": ["Overlooking ", "", "Reduces damage by #b33%. NL Draws #b1 card for each type of #yDebuff the target has."],
+        "EXTRA_TEXT": [" NL Draw %d card for each type of Debuff the target has."]
+    },
+    "mojichimera:OverpoweredMod": {
+        "TEXT": ["Overpowered ", "", "Increases cost by #b1. NL Ethereal. Increases card values by #b133%."],
+        "EXTRA_TEXT": ["Ethereal. NL "]
+    },
+    "mojichimera:OvershootMod": {
+        "TEXT": ["Overshoot ", "", "Increases card values by #b200%. NL Gives #b2 #yVulnerable, #yWeak, and #yFrail."],
+        "EXTRA_TEXT": [" NL Gain %d Vulnerable, Weak, and Frail."]
+    },
+    "mojichimera:PeaceMod": {
+        "TEXT": ["", " Peace", "Draw #b2 cards when you are in #yCalm."],
+        "EXTRA_TEXT": [" NL Calm: Draw %d cards."]
+    },
+    "mojichimera:PersistentMod": {
+        "TEXT": ["Persistent ", "", "Discards #b1 card at random. NL If successful, returns this card to your hand."],
+        "EXTRA_TEXT": [" NL Discard %d card at random. If successful, returns this card to your hand."]
+    },
+    "mojichimera:ReleaseMod": {
+        "TEXT": ["", " Release", "Adds #yExhaust. NL Increases cost by #b1. NL At the start of each turn, plays a copy of this card."],
+        "EXTRA_TEXT": [" NL At the start of each turn, plays a copy of this card."]
+    },
+    "mojichimera:RushdownMod": {
+        "TEXT": ["Rushdown ", "", "Becomes a #yPower. NL Reduces damage and #yBlock by #b50%. NL Whenever you enter #yWrath, plays a copy of the original card."],
+        "EXTRA_TEXT": ["Whenever you enter Wrath: NL "]
+    },
+    "mojichimera:ShareMod": {
+        "TEXT": ["Sharing ", "", "Adds #yExhaust. NL Reduces damage and #yBlock by #b33%. NL When played, increases damage and #yBlock of other cards in your hand by values on this card."],
+        "EXTRA_TEXT": [" NL Increases damage and Block of other cards in your hand by values on this card."]
+    },
+    "mojichimera:SkillizedMod": {
+        "TEXT": ["Skillized ", "", "Becomes a #ySkill."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:SociableMod": {
+        "TEXT": ["Sociable ", "", "Increases damage and #yBlock by #b15% for each card of the same type in your hand."],
+        "EXTRA_TEXT": [" NL Increases damage and Block by %d%% for each card of the same type in your hand."]
+    },
+    "mojichimera:SozuMod": {
+        "TEXT": ["Sozu ", "", "Reduces cost by up to #b2. NL Loses #b1 [E] for each potion you have."],
+        "EXTRA_TEXT": [" NL Loses [E] for each potion you have."]
+    },
+    "mojichimera:StrangeMod": {
+        "TEXT": ["Strange ", "", "No longer #yExhausts."],
+        "EXTRA_TEXT": ["NL No longer Exhausts.",
+            "Exhaust.",
+            "",
+            "Exhausts. NL Exhausts.",
+            "Exhausts."
+        ]
+    },
+    "mojichimera:TacticsMod": {
+        "TEXT": ["", " Tactics", "If this card is discarded from your hand, triggers effects upon playing, then #yExhausts."],
+        "EXTRA_TEXT": [" NL If this card is discarded from your hand, triggers effects upon playing, then exhausts."]
+    },
+    "mojichimera:TransfiniteMod": {
+        "TEXT": ["Transfinite ", "", "Can be #yUpgraded any number of times."],
+        "EXTRA_TEXT": [" NL Can be Upgraded any number of times."]
+    },
+    "mojichimera:TrinityMod": {
+        "TEXT": ["Trinity ", "", "If you have played an #yAttack, #ySkill, and #yPower card this turn, increases card values by #b67%."],
+        "EXTRA_TEXT": [" NL If you have played an Attack, Skill, and Power card this turn, increases card values by %d%%."]
+    },
+    "mojichimera:UnawakenedMod": {
+        "TEXT": ["Unawakened ", "", "Adds #yEthereal. NL At the start of the #b2nd turn after #yExhausted, adds an #yAwakened copy to your hand."],
+        "EXTRA_TEXT": [" NL At the start of the %dnd turn after Exhausted, adds an Awakened copy to your hand."]
+    },
+    "mojichimera:UnloadMod": {
+        "TEXT": ["Unloading ", "", "Increases card values by #b133%. NL When played, discards all non-Skill cards."],
+        "EXTRA_TEXT": [" NL Discard all non-Skill cards."]
+    },
+    "mojichimera:UnsociableMod": {
+        "TEXT": ["Unsociable ", "", "Increases damage and #yBlock by #b100%. NL Decreases by #b25% of base values for each card of the same type in your hand."],
+        "EXTRA_TEXT": [" NL Decreases damage and Block by %d%% for each card of the same type in your hand."]
+    },
+    "mojichimera:VanityMod": {
+        "TEXT": ["Vanity ", "", "Adds #yEthereal. NL The effects upon playing are instead triggered when drawn."],
+        "EXTRA_TEXT": ["When drawn: NL "]
+    },
+    "mojichimera:XXMod": {
+        "TEXT": ["", " XX", "This card is performed X times."],
+        "EXTRA_TEXT": ["Perform X times: NL "]
+    },
+    "mojichimera:AfterAngerMod": {
+        "TEXT": ["", " After Anger", "Creates and discards a copy of this card."],
+        "EXTRA_TEXT": [" NL Create and discard a copy of this card."]
+    },
+    "mojichimera:BarrageMod": {
+        "TEXT": ["", " Barrage", "Discard all #yStatus cards in your hand, then draw that many cards."],
+        "EXTRA_TEXT": [" NL Discard all Status cards in your hand, then draw that many cards."]
+    },
+    "mojichimera:BeholdingMod": {
+        "TEXT": ["Beholding ", "", "Reduces damage by #b33%. NL Draws #b1 card for each type of #yBuff the enemy has."],
+        "EXTRA_TEXT": [" NL Draw %d card for each type of Buff the enemy has."]
+    },
+    "mojichimera:BleedingMod": {
+        "TEXT": ["Bleeding ", "", "Increases damage by #b20% for each time you lose HP in combat."],
+        "EXTRA_TEXT": [" NL Increases damage by %d%% for each time you lose HP in combat."]
+    },
+    "mojichimera:BootingMod": {
+        "TEXT": ["Booting ", "", "Increases card values by #b67% for the first time played each combat."],
+        "EXTRA_TEXT": [" NL Increases card values by %d%% for the first time played each combat."]
+    },
+    "mojichimera:BuriedMod": {
+        "TEXT": ["Buried ", "", "#yGrave. NL Increases card values by #b33%."],
+        "EXTRA_TEXT": ["Grave. NL "]
+    },
+    "mojichimera:ChaoticMod": {
+        "TEXT": ["Chaotic ", "", "At the start of each combat, card values are randomized between #b50% (rounded up) and #b200% of their base values."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:ConcludeMod": {
+        "TEXT": ["Concluding ", "", "Increases damage and #yBlock by #b75%. NL Ends your turn."],
+        "EXTRA_TEXT": [" NL Ends your turn."]
+    },
+    "mojichimera:CounterMod": {
+        "TEXT": ["Counter ", "", "Becomes a #yPower. NL Reduces damage and #yBlock by #b50%. NL Whenever you are attacked, plays a copy of the original card to the attacker."],
+        "EXTRA_TEXT": [" NL Whenever you are attacked: NL "]
+    },
+    "mojichimera:DeadOnMod": {
+        "TEXT": ["Dead On ", "", "Increases damage and #yBlock by #b33% when played from the middle of your hand. NL When the hand size is even, both cards in the middle qualify."],
+        "EXTRA_TEXT": [" NL Increases damage and Block by %d%% when played from the middle of your hand."]
+    },
+    "mojichimera:DodgeMod": {
+        "TEXT": ["Dodging ", "", "Gives #b3 #yDexterity this turn."],
+        "EXTRA_TEXT": [" NL Gain %d Dexterity. NL At the end of this turn, lose %d Dexterity."]
+    },
+    "mojichimera:EducationalMod": {
+        "TEXT": ["Educational ", "", "If this card is discarded from your hand, randomly upgrades #b1(+1) cards."],
+        "EXTRA_TEXT": [" NL If this card is discarded from your hand, randomly upgrades %s card.", " NL If this card is discarded from your hand, randomly upgrades %s cards."]
+    },
+    "mojichimera:EstablishedMod": {
+        "TEXT": ["Established ", "", "#yRetain. NL When #yRetained, lowers its cost by #b1 this combat."],
+        "EXTRA_TEXT": ["Retain. NL ",
+            " NL when Retained, lower its cost by %d.",
+            " NL When Retained, lower its cost by 1 this combat.",
+            " NL When Retained, lower its cost by %d this combat."
+        ]
+    },
+    "mojichimera:ExpansionMod": {
+        "TEXT": ["Expansion ", "", "Increases card values by #b4% for each card in your deck over #b25."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:ExperimentalMod": {
+        "TEXT": ["Experimental ", "", "Adds #b3 random #yStatus cards to the draw pile, discard pile, or hand. NL Card values are randomized between #b100% and #b250% of their base values."],
+        "EXTRA_TEXT": [" NL Adds %d random Status cards to the draw pile, discard pile, or hand."]
+    },
+    "mojichimera:ExploitMod": {
+        "TEXT": ["", " Exploit", "Increases damage by #b20% for each #yVulnerable the enemy has."],
+        "EXTRA_TEXT": [" NL Increases damage by %d%% for each Vulnerable the enemy has."]
+    },
+    "mojichimera:FireBreathingMod": {
+        "TEXT": ["Fire Breathing ", "", "Becomes a #yPower. NL Whenever you draw a #yStatus or #yCurse card, plays a copy of the original card."],
+        "EXTRA_TEXT": ["Whenever you draw a Status or Curse card: NL "]
+    },
+    "mojichimera:FlashOfMod": {
+        "TEXT": ["Flash Of ", "", "Reduces damage by #b33%. NL Whenever you deal unblocked damage, draw #b1 card."],
+        "EXTRA_TEXT": [" NL Whenever you deal unblocked damage, draw %d card."]
+    },
+    "mojichimera:FlauntingMod": {
+        "TEXT": ["Flaunting ", "", "Increases damage by #b20% for each type of #yBuff you have."],
+        "EXTRA_TEXT": [" NL Increases damage by %d%% for each type of Buff you have."]
+    },
+    "mojichimera:FocusedMod": {
+        "TEXT": ["Focused ", "", "Gives #b2 #yFocus this turn."],
+        "EXTRA_TEXT": [" NL Gain %d Focus. NL At the end of this turn, lose %d Focus."]
+    },
+    "mojichimera:FuelFlameMod": {
+        "TEXT": ["Fuel Adding ", "", "Reduces damage and #yBlock by #b33%. If the enemy has #yVulnerable, NL gain [E] and draw #b1 card."],
+        "EXTRA_TEXT": [
+            " NL If the enemy has Vulnerable, NL gain [E] and draw %d card.",
+            " NL If the enemy has Vulnerable, NL gain [E] [E] and draw %d cards.",
+            " NL If the enemy has Vulnerable, NL gain [R] and NL draw 1 card."
+        ]
+    },
+    "mojichimera:FuritenMod": {
+        "TEXT": ["Furiten ", "", "Increases card values by #b67%. NL Can only be played once per turn."],
+        "EXTRA_TEXT": [" NL Can only be played once per turn."]
+    },
+    "mojichimera:GamblingMod": {
+        "TEXT": ["Gambling ", "", "Discard your hand, then draw that many cards."],
+        "EXTRA_TEXT": [" NL Discard your hand, then draw that many cards."]
+    },
+    "mojichimera:GlazeMod": {
+        "TEXT": ["Glaze ", "", "Increases card values by #b33%. NL Has a #b1/4 chance to #yExhaust when played."],
+        "EXTRA_TEXT": [" NL Has a 1/4 chance to Exhaust."]
+    },
+    "mojichimera:HighCardMod": {
+        "TEXT": ["High Card ", "", "If all cards in your hand are unique, increases damage and #yBlock by #b20%."],
+        "EXTRA_TEXT": [" NL If all cards in your hand are unique, increases damage and Block by %d%%."]
+    },
+    "mojichimera:IndignantMod": {
+        "TEXT": ["Indignant ", "", "Deals #b33% more damage when you are in #yWrath."],
+        "EXTRA_TEXT": [" NL Wrath: Deals %d%% more damage."]
+    },
+    "mojichimera:KnockoffMod": {
+        "TEXT": ["Knockoff ", "", "Reduces cost by #b1. NL Cannot be upgraded."],
+        "EXTRA_TEXT": [" NL Cannot be upgraded."]
+    },
+    "mojichimera:MinimalMod": {
+        "TEXT": ["Minimal ", "", "Increases card values by #b10% for each card in your deck under #b15."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:OnSaleMod": {
+        "TEXT": ["", " On Sale", "Reduces cost by an additional #b1 when upgraded."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:PainfulMod": {
+        "TEXT": ["Painful ", "", "Increases card values by #b100%. NL While in hand, loses #b1 HP whenever you play another card."],
+        "EXTRA_TEXT": [" NL While in hand, loses %d HP whenever you play another card."]
+    },
+    "mojichimera:PainlessMod": {
+        "TEXT": ["Painless ", "", "Adds #yEthereal. NL When #yExhausted, gives #b5(+2) #yBlock."],
+        "EXTRA_TEXT": [" NL When exhausted, gain %s Block."]
+    },
+    "mojichimera:PelletMod": {
+        "TEXT": ["", " Pellet", "Randomly removes #b1(+1) of your #yDebuffs."],
+        "EXTRA_TEXT": [" NL Randomly removes %s of your Debuffs.", " NL Randomly removes %s of your Debuffs."]
+    },
+    "mojichimera:PerseverantMod": {
+        "TEXT": ["Perseverant ", "", "The lower your current HP percentage, the more #yBlock you gain, up to #b150%."],
+        "EXTRA_TEXT": [" NL The lower your current HP percentage, the more Block you gain."]
+    },
+    "mojichimera:PourSaltMod": {
+        "TEXT": ["Salt Pouring ", "", "Reduces damage and #yBlock by #b33%. If the enemy has #yWeak, NL gain [E] and draw #b1 card."],
+        "EXTRA_TEXT": [
+            " NL If the enemy has Weak, NL gain [E] and draw %d card.",
+            " NL If the enemy has Weak, NL gain [E] [E] and draw %d cards.",
+            " NL If the enemy has Weak, NL gain [G] and NL draw 1 card."
+        ]
+    },
+    "mojichimera:PrepaidMod": {
+        "TEXT": ["Prepaid ", "", "Discard #b2 cards. NL Draw #b3 cards next turn."],
+        "EXTRA_TEXT": [" NL Discard %d cards. NL Draw %d cards next turn."]
+    },
+    "mojichimera:RecyclableMod": {
+        "TEXT": ["Recyclable ", "", "Adds #yEthereal. NL When #yExhausted, gives [E] next turn."],
+        "EXTRA_TEXT": ["Ethereal. NL ", " NL When exhausted, gain [E] next turn."]
+    },
+    "mojichimera:ReflexMod": {
+        "TEXT": ["", " Reflex", "If this card is discarded from your hand, draw #b1(+1) cards."],
+        "EXTRA_TEXT": [" NL If this card is discarded from your hand, draw %s card.", " NL If this card is discarded from your hand, draw %s cards."]
+    },
+    "mojichimera:RefundMod": {
+        "TEXT": ["Refundable ", "", "Returns energy spent on this card, up to #b1."],
+        "EXTRA_TEXT": [" NL stslib:Refund %d."]
+    },
+    "mojichimera:RegretfulMod": {
+        "TEXT": ["Regretful ", "", "Increases card values by #b100%. NL At the end of your turn, lose HP equal to the number of cards in your hand if this card is in your hand."],
+        "EXTRA_TEXT": [" NL At the end of your turn, lose HP equal to the number of cards in your hand if this card is in your hand."]
+    },
+    "mojichimera:ReplenishMod": {
+        "TEXT": ["Replenishing ", "", "Draw #b1 card when drawn."],
+        "EXTRA_TEXT": [" NL Draw %d card when drawn."]
+    },
+    "mojichimera:RiichiMod": {
+        "TEXT": ["Riichi ", "", "Increases card values by #b75%. NL #yAutoplays."],
+        "EXTRA_TEXT": ["Autoplay. NL "]
+    },
+    "mojichimera:SadisticMod": {
+        "TEXT": ["Sadistic ", "", "Increases cost by #b1. NL Becomes a #yPower. NL Whenever you apply #yDebuffs to an enemy, plays a copy of the original card. NL Cannot be triggered recursively."],
+        "EXTRA_TEXT": ["Whenever you apply Debuffs to an enemy: NL "]
+    },
+    "mojichimera:SarcasticMod": {
+        "TEXT": ["Sarcastic ", "", "Increases damage by #b20% for each type of #yDebuff the enemy has."],
+        "EXTRA_TEXT": [" NL Increases damage by %d%% for each type of Debuff the enemy has."]
+    },
+    "mojichimera:SlowMod": {
+        "TEXT": ["Slow ", "", "Increases damage by #b10% for each card played this turn."],
+        "EXTRA_TEXT": [" NL Increases damage by %d%% for each card played this turn."]
+    },
+    "mojichimera:SteelMod": {
+        "TEXT": ["Steel ", "", "When drawn, increases card values of the next #b1 card played this turn by #b50%. NL The target cards must be an Attack, Skill, or Power card with values of at least #b2."],
+        "EXTRA_TEXT": [" NL When drawn, increases card values of the next %d card played this turn by %d%%."]
+    },
+    "mojichimera:StrategyMod": {
+        "TEXT": ["", " Strategy", "Reduces damage and #yBlock by #b33%. NL Draw #b2 cards."],
+        "EXTRA_TEXT": [" NL Draw %d cards."]
+    },
+    "mojichimera:TranquilMod": {
+        "TEXT": ["Tranquil ", "", "Enters #yCalm."],
+        "EXTRA_TEXT": [" NL Enter Calm."]
+    },
+    "mojichimera:TsumoMod": {
+        "TEXT": ["Tsumo ", "", "Starting from the #b2nd time played each turn, increases card values by #b50%."],
+        "EXTRA_TEXT": [" NL Starting from the %dnd time played each turn, increases card values by %d%%."]
+    },
+    "mojichimera:TwinMod": {
+        "TEXT": ["Twin ", "", "Increases cost by #b1. NL Plays twice."],
+        "EXTRA_TEXT": [" NL Plays twice."]
+    },
+    "mojichimera:VirtueMod": {
+        "TEXT": ["Virtuous ", "", "Reduces each of your debuffs by #b1."],
+        "EXTRA_TEXT": [" NL Reduce each of your debuffs by %d."],
+        "NOTES": ["FROM Downfall Hermit:Virtue"]
+    },
+    "mojichimera:VolatileMod": {
+        "TEXT": ["Volatile ", "", "Plays for a random number of times between #0 and #3 . NL Plays at least #b1 time when this card #yExhausts."],
+        "EXTRA_TEXT": [" NL Plays for a random number of times between %d and %d ."]
+    },
+    "mojichimera:ArtOfMod": {
+        "TEXT": ["Art of ", "", "If this card is in your hand at the end of your turn, draw #b1 card next turn."],
+        "EXTRA_TEXT": [" NL If this card is in your hand at the end of your turn, draw %d card next turn."]
+    },
+    "mojichimera:AttentiveMod": {
+        "TEXT": ["Attentive ", "", "Plays twice. NL Discards #b2 cards at random."],
+        "EXTRA_TEXT": [" NL Plays twice. NL Discard %d cards at random."]
+    },
+    "mojichimera:BankruptMod": {
+        "TEXT": ["Bankrupted ", "", "If you have no more than #b100(150) #yGold, reduces cost by [E] ."],
+        "EXTRA_TEXT": [" NL If you have no more than %d Gold, reduces cost by [E] ."]
+    },
+    "mojichimera:BloodDebtMod": {
+        "TEXT": ["Blood Debt ", "", "Reduces cost by #b1. NL Loses #b2 HP when played."],
+        "EXTRA_TEXT": ["Lose %d HP. NL "]
+    },
+    "mojichimera:BluntMod": {
+        "TEXT": ["Blunt ", "", "Sets cost to #b0. NL Reduces #yBlock by #b100%."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:CleansingMod": {
+        "TEXT": ["Cleansing ", "", "#yExhausts #b2(+1) random #yStatus or #yCurse card in your draw pile, discard pile, or hand."],
+        "EXTRA_TEXT": [" NL Exhaust %s random Status or Curse card from any card piles.", " NL Exhaust %s random Status or Curse cards from any card piles."]
+    },
+    "mojichimera:CombosMod": {
+        "TEXT": ["", " Combos", "If the previous card played was an Skill, returns this card to your hand."],
+        "EXTRA_TEXT": [" NL If the previous card played was an Skill, returns this card to your hand."]
+    },
+    "mojichimera:ConcentratedMod": {
+        "TEXT": ["Concentrated ", "", "Reduces cost by #b2. NL Discards #b3(2) cards."],
+        "EXTRA_TEXT": [" NL Discard %d cards."]
+    },
+    "mojichimera:CreditMod": {
+        "TEXT": ["Creditable ", "", "If you have at least #b250(150) #yGold, reduces cost by [E] ."],
+        "EXTRA_TEXT": [" NL If you have at least %d Gold, reduces cost by [E] ."]
+    },
+    "mojichimera:DelayedMod": {
+        "TEXT": ["Delayed ", "", "Reduces cost by #b1. NL Effects trigger at the start of the next turn."],
+        "EXTRA_TEXT": ["At the start of the next turn: NL "]
+    },
+    "mojichimera:DiscordMod": {
+        "TEXT": ["Discord ", "", "Increases card values by #b50% . NL While in hand, discards #b1 card at random for each other card played."],
+        "EXTRA_TEXT": [" NL While in hand, discard %d card at random for each other card played."]
+    },
+    "mojichimera:EmptiedMod": {
+        "TEXT": ["Emptied ", "", "Plays twice. NL Shuffles #b1 copy of #yVoid into your discard pile."],
+        "EXTRA_TEXT": [" NL Plays twice. NL Shuffle %d copy of *Void into your discard pile."]
+    },
+    "mojichimera:EquilibriumMod": {
+        "TEXT": ["Equilibrium ", "", "#yRetain up to #b1(+1) cards this turn."],
+        "EXTRA_TEXT": [" NL Retain up to %s card this turn.", " NL Retain up to %s cards this turn."]
+    },
+    "mojichimera:ForeDoomedMod": {
+        "TEXT": ["Foredoomed ", "", "Adds #b2 random #yCurse cards to your hand (excluding #yNormality). NL For each Curse in your hand, plays this card again."],
+        "EXTRA_TEXT": [" NL Adds %d random Curse cards to your hand. NL For each Curse in your hand, plays this card again."]
+    },
+    "mojichimera:GoldenMod": {
+        "TEXT": ["Golden ", "", "Gives #b3 #yGold when played."],
+        "EXTRA_TEXT": [" NL Gain %d Gold."]
+    },
+    "mojichimera:GooMod": {
+        "TEXT": ["", " Of Goo", "Plays twice. NL Shuffles #b1 copy of #ySlimed into your discard pile."],
+        "EXTRA_TEXT": [" NL Plays twice. NL Shuffle %d copy of *Slimed into your discard pile."]
+    },
+    "mojichimera:HalfMod": {
+        "TEXT": ["Half ", "", "If you have played no more than #b3 cards this turn, increases damage and #yBlock by #b33%."],
+        "EXTRA_TEXT": [" NL If you have played no more than %d cards this turn, increases damage and Block by %d%%."]
+    },
+    "mojichimera:HappyMod": {
+        "TEXT": ["Happy ", "", "Every #b3(2) times this card is drawn, costs #b0 next time it is played."],
+        "EXTRA_TEXT": [" NL Every %d times this card is drawn, costs 0 next time it is played."]
+    },
+    "mojichimera:HeavyThrowMod": {
+        "TEXT": ["Heavy Throw ", "", "Plays twice. NL Gives #b2 #yFrail."],
+        "EXTRA_TEXT": [" NL Plays twice. NL Gain %d Frail."]
+    },
+    "mojichimera:HexedMod": {
+        "TEXT": ["Hexed ", "", "Reduces cost by #b1. NL Shuffles #b1 copy of #yDazed into your draw pile."],
+        "EXTRA_TEXT": [" NL Shuffles %d copy of *Dazed into your draw pile."]
+    },
+    "mojichimera:HorrorMod": {
+        "TEXT": ["", " Horror", "Plays twice. NL Gives #b1 #yVulnerable."],
+        "EXTRA_TEXT": [" NL Plays twice. NL Gain %d Vulnerable."]
+    },
+    "mojichimera:InfusedMod": {
+        "TEXT": ["Infused ", "", "Increases damage by an additional #b5 when upgraded."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:InspiredMod": {
+        "TEXT": ["Inspired ", "", "Increases magic number by an additional #b1 when upgraded."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:LanternMod": {
+        "TEXT": ["", " Lantern", "When first drawn, gains [E] ."],
+        "EXTRA_TEXT": [" NL When first drawn, gains [E] ."]
+    },
+    "mojichimera:MisfireMod": {
+        "TEXT": ["Misfiring ", "", "Plays twice. NL Shuffles #b1 copy of #yBurn into your discard pile."],
+        "EXTRA_TEXT": [" NL Plays twice. NL Shuffle %d copy of *Burn into your discard pile."]
+    },
+    "mojichimera:PairMod": {
+        "TEXT": ["Pair ", "", "If there is another card of the same name in your hand, increases damage and #yBlock by #b67%."],
+        "EXTRA_TEXT": [" NL If there is another card of the same name in your hand, increases damage and Block by %d%%."]
+    },
+    "mojichimera:PastMod": {
+        "TEXT": ["Past ", "", "Increases card values by #b50%. NL Effects trigger at the start of the next turn."],
+        "EXTRA_TEXT": ["At the start of the next turn: NL "]
+    },
+    "mojichimera:PeacefulMod": {
+        "TEXT": ["Peaceful ", "", "Sets cost to #b0. NL Reduces damage by #b100%."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:PocketMod": {
+        "TEXT": ["Pocket ", "", "Sets cost to #b0. NL Proportionally reduces card values (rounded up)."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:PortableMod": {
+        "TEXT": ["Portable ", "", "Reduces cost by #b1. NL Loses [E] when played."],
+        "EXTRA_TEXT": [" NL Lose [E] when played."]
+    },
+    "mojichimera:PostpaidMod": {
+        "TEXT": ["Postpaid ", "", "Discard #b1 card. NL #yRetain up to #b2 cards this turn."],
+        "EXTRA_TEXT": [" NL Discard %d card. NL Retain up to %d cards this turn."]
+    },
+    "mojichimera:PowerThroughMod": {
+        "TEXT": ["Power Through ", "", "Increases damage and #yBlock by #b75%. NL Adds #b2 #yWound to your hand."],
+        "EXTRA_TEXT": [" NL Adds %d *Wound to your hand."]
+    },
+    "mojichimera:PreemptiveMod": {
+        "TEXT": ["Preemptive ", "", "Unless #ynon-priority cards are played while in your hand, increases damage and #yBlock by #b33%. NL Priority cards include #yAbsolute, #yPreemptive, and #yReserved."],
+        "EXTRA_TEXT": [" NL Unless non-priority cards are played while in your hand, increases damage and Block by %d%%."]
+    },
+    "mojichimera:ReactiveMod": {
+        "TEXT": ["Reactive ", "", "#yRetain. NL When #yRetained, increases magic number by #b1 this combat."],
+        "EXTRA_TEXT": [
+            "Retain. NL ",
+            " NL When Retained, increase magic number by %d this combat.",
+            " NL When Retained, increase magic number by %d this combat."
+        ]
+    },
+    "mojichimera:RebateMod": {
+        "TEXT": ["Rebate ", "", "Adds #yEthereal. NL When #yExhausted, gives #b8(+4) #yGold."],
+        "EXTRA_TEXT": ["Ethereal. NL ", " NL When exhausted, gain %s Gold."]
+    },
+    "mojichimera:RecklessMod": {
+        "TEXT": ["Reckless ", "", "Increases damage and #yBlock by #b50%. NL Shuffles #b1 copy of #yDazed into your draw pile."],
+        "EXTRA_TEXT": [" NL Shuffles %d copy of *Dazed into your draw pile."]
+    },
+    "mojichimera:ReinforcedMod": {
+        "TEXT": ["Reinforced ", "", "Increases #yBlock by an additional #b4 when upgraded."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:RentalMod": {
+        "TEXT": ["Rental ", "", "Reduces cost by #b1. NL Loses #b6 #yGold when played."],
+        "EXTRA_TEXT": [" NL Lose %d Gold."]
+    },
+    "mojichimera:ReservedMod": {
+        "TEXT": ["Reserved ", "", "Increases card values by #b33%. NL When #ynon-priority cards are played while in your hand, discards this card. NL Priority cards include #yAbsolute, #yPreemptive, and #yReserved."],
+        "EXTRA_TEXT": [" NL When non-priority cards are played while in your hand, discards this card."]
+    },
+    "mojichimera:RetreatingMod": {
+        "TEXT": ["Retreating ", "", "If the previous card played was an Attack, returns this card to your hand."],
+        "EXTRA_TEXT": [" NL If the previous card played was an Attack, returns this card to your hand."]
+    },
+    "mojichimera:SelfTaughtMod": {
+        "TEXT": ["Self-Taught ", "", "#yUpgrades in this combat when played."],
+        "EXTRA_TEXT": [" NL Upgrades in this combat."]
+    },
+    "mojichimera:ShackleMod": {
+        "TEXT": ["Shackle ", "", "All enemies lose #b2(+1) #yStrength this turn."],
+        "EXTRA_TEXT": [" NL All enemies lose %s Strength this turn."]
+    },
+    "mojichimera:SlimyMod": {
+        "TEXT": ["Slimy ", "", "Increases card values by #b50%. NL Discards #b1 card at random when drawn."],
+        "EXTRA_TEXT": [" NL Discard %d card at random when drawn."]
+    },
+    "mojichimera:StrenuousMod": {
+        "TEXT": ["Strenuous ", "", "Increases card values by #b25%. NL Discard #b1 card."],
+        "EXTRA_TEXT": [" NL Discard %d card."]
+    },
+    "mojichimera:SwappingMod": {
+        "TEXT": ["Swapping ", "", "Discard #b1 card. NL Draw #b1 card."],
+        "EXTRA_TEXT": [" NL Discard %d card. Draw %d card."]
+    },
+    "mojichimera:VigorMod": {
+        "TEXT": ["Vigor ", "", "Gives #b3 #yVigor."],
+        "EXTRA_TEXT": [" NL Gain %d *Vigor."]
+    },
+    "mojichimera:WildMod": {
+        "TEXT": ["Wild ", "", "Increases damage and #yBlock by #b67%. NL Shuffles #b1 copy of #yWound to your draw pile."],
+        "EXTRA_TEXT": [" NL Shuffles %d copy of #yWound to your draw pile."]
+    },
+    "mojichimera:WorshipMod": {
+        "TEXT": ["", " Worship", "Plays twice. NL Gives #b2 #yWeak."],
+        "EXTRA_TEXT": [" NL Plays twice. NL Gain %d Weak."]
+    },
+    "mojichimera:AdaptiveMod": {
+        "TEXT": ["Adaptive ", "", "#rDeprecated. NL Increases cost by #b1. NL If the enemy intends to attack, gain #yBlock equal to the unblocked damage dealt; otherwise, deal #b100% more damage."],
+        "EXTRA_TEXT": [" NL If the enemy intends to attack, gain Block equal to the unblocked damage dealt; otherwise, deal more damage."]
+    },
+    "mojichimera:AwakenedMod": {
+        "TEXT": ["Awakened ", "", "#rCard #reffects. NL Increases card values by #b200%."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:ChimericMod": {
+        "TEXT": ["Chimeric ", "", "#rDeprecated. NL Adds #yExhaust. NL Adds a random #yAugment to all cards in your hand when played."],
+        "EXTRA_TEXT": [" NL Add a random Augment to all cards in your hand. NL Exhaust.", " NL Add a random Augment to all cards in your hand."]
+    },
+    "mojichimera:FinaleMod": {
+        "TEXT": ["", " Finale", "#rDeprecated. NL If there are no other cards in your hand, increases card values by #b100% and draws #b1 card when played."],
+        "EXTRA_TEXT": [" NL If there are no other cards in your hand, increases card values by %d%% and draws %d card."]
+    },
+    "mojichimera:NamelessMod": {
+        "TEXT": ["Nameless ", "", "#rCard #reffects. NL Increases card values by #b50%."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:OverchargedMod": {
+        "TEXT": ["Overcharged ", "", "#rDeprecated. NL Multiplies card values by #b233%. NL Increases cost by #b1."],
+        "EXTRA_TEXT": [" NL Multiplies card values by %d%%. NL Increases cost by %d."]
+    },
+    "mojichimera:ShareHelperMod": {
+        "TEXT": ["Shared ", "", "#rCard #reffects. NL Expresses gratitude for #ySharing."],
+        "EXTRA_TEXT": []
+    },
+    "mojichimera:SkimMod": {
+        "TEXT": ["", " Skim", "#rDeprecated. NL Draw #b1(+1) cards."],
+        "EXTRA_TEXT": [" NL Draw %s card.", " NL Draw %s cards."]
+    },
+    "mojichimera:PromiseMod": {
+        "TEXT": ["Promise", "", "When #yExhausted, draw #b1 card."],
+        "EXTRA_TEXT": [" NL When exhausted, draw %d card."]
+    },
+    "mojichimera:VirusMod": {
+        "TEXT": ["", " Virus", "When played, turns all cards in your hand into #yExhaust and #yEthereal copies of this card. NL #yVirus does not apply to copies."],
+        "EXTRA_TEXT": [" NL Turns all cards in your hand into Exhaust and Ethereal copies of this card."]
+    },
+    "mojichimera:InscribedMod": {
+        "TEXT": ["Inscribed ", "", "When played, activate the passive of your next Orb."],
+        "EXTRA_TEXT": [" NL Activate the passive of your next Orb."]
+    },
+    "mojichimera:EchoMod": {
+        "TEXT": ["Echo ", "", "When played, adds an #yExhaust and #yEthereal copy of this card to your hand."],
+        "EXTRA_TEXT": [" NL Add an Exhaust and Ethereal copy of this card to your hand."]
+    },
+    "mojichimera:PrismaticMod": {
+        "TEXT": ["Prismatic ", "", "Adds #b1 random #yEthereal #ydifferent #ycolor card to your hand."],
+        "EXTRA_TEXT": [" NL Add %d random Ethereal *different *color card to your hand."]
+    },
+    "mojichimera:packmaster_VirusMod": {
+        "TEXT": ["", " Virus", "When played, turns all cards in your hand into #yExhaust and #yEthereal copies of this card. NL #yVirus does not apply to copies."],
+        "EXTRA_TEXT": [" NL Turns all cards in your hand into anniv5:Echo copies of this card."]
+    },
+    "mojichimera:packmaster_InscribedMod": {
+        "TEXT": ["Inscribed ", "", "When played, activate the passive of your next Orb, then of all #yFull and #yCrescent #yMoon Orbs."],
+        "EXTRA_TEXT": [" NL Activate the passive of your next Orb, then of all Full and Crescent Moon Orbs."]
+    },
+    "mojichimera:packmaster_EchoMod": {
+        "TEXT": ["Echo ", "", "When played, adds an #yExhaust and #yEthereal copy of this card to your hand."],
+        "EXTRA_TEXT": [" NL anniv5:Echo ."]
+    },
+    "mojichimera:packmaster_PrismaticMod": {
+        "TEXT": ["Prismatic ", "", "Adds #b1 random #yEthereal #ydifferent #ycolor card to your hand."],
+        "EXTRA_TEXT": [" NL Add %d random Ethereal anniv5:different\u00a0color card to your hand."]
+    }
+}

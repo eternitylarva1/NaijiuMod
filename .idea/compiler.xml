@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Fanzhuan" />
+        <module name="Naijiumod" />
         <module name="Souldeck" />
+        <module name="Fanzhuan" />
         <module name="more-money-spire-mod" />
       </profile>
     </annotationProcessing>

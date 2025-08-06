@@ -4,10 +4,12 @@ package Naijiumod.hook;
 
 import Naijiumod.cardModifier.AbstractAugment;
 import Naijiumod.cardModifier.ItemMod;
+import Naijiumod.screens.ChooseModifierScreen;
 import Naijiumod.screens.MyScreen;
 import Naijiumod.ui.FumoEffect;
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.abstracts.AbstractCardModifier;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardModifierManager;
 import basemod.interfaces.*;
@@ -28,10 +30,13 @@ import org.apache.logging.log4j.Logger;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.stream.Collectors;
 
 import static com.megacrit.cardcrawl.core.Settings.language;
-
+import static mojichimera.mojichimera.getModID;
+import static mojichimera.mojichimera.loadLocalizationIfAvailable;
 /**
  * 加载遗物 用于在游戏中注入你修改的内容
  *
@@ -66,6 +71,26 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
     }
     public static String ModID="Naijiu";
 
+    /*     */   public static void applyWeightedCardMod(AbstractCard c, AbstractAugment.AugmentRarity rarity, int index) {
+        /* 833 */     ArrayList<AbstractAugment> validMods = new ArrayList<>();
+        /* 834 */     switch (rarity) {
+            /*     */       case COMMON:
+                /* 836 */         validMods.addAll((Collection<? extends AbstractAugment>)commonMods.stream().filter(m -> (m.canApplyTo(c) )).collect(Collectors.toCollection(ArrayList::new)));
+                /*     */         break;
+            /*     */       case UNCOMMON:
+                /* 839 */         validMods.addAll((Collection<? extends AbstractAugment>)uncommonMods.stream().filter(m -> (m.canApplyTo(c))).collect(Collectors.toCollection(ArrayList::new)));
+                /*     */         break;
+            /*     */       case RARE:
+                /* 842 */         validMods.addAll((Collection<? extends AbstractAugment>)rareMods.stream().filter(m -> (m.canApplyTo(c) )).collect(Collectors.toCollection(ArrayList::new)));
+                /*     */         break;
+            /*     */     }
+        /* 845 */     if (!validMods.isEmpty()) {
+            /* 846 */       AbstractCardModifier m = ((AbstractAugment)validMods.get(AbstractDungeon.miscRng.random(validMods.size() - 1))).makeCopy();
+            /* 847 */       CardModifierManager.addModifier(c, m);
+            /* 848 */
+            /*     */     }
+        /*     */   }
+
     /**
      * 在游戏模组中加入新遗物
      */
@@ -95,6 +120,20 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
 
         receiveJson("UI", "uistrings.json", UIStrings.class);
         receiveJson("Power", "powerstrings.json", PowerStrings.class);
+        logger.info("Editing strings");
+
+        // UI Strings
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                getModID() + "Resources/localization/"+loadLocalizationIfAvailable("mojichimera-UI-Strings.json"));
+
+        // Augment Strings
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                getModID() + "Resources/localization/"+loadLocalizationIfAvailable("mojichimera-Augment-Strings.json"));
+
+        // Power Strings
+        BaseMod.loadCustomStringsFile(PowerStrings.class,
+                getModID() + "Resources/localization/"+loadLocalizationIfAvailable("mojichimera-Power-Strings.json"));
+
 
     }
     public static final ArrayList<AbstractAugment> commonMods = new ArrayList<>();
@@ -107,6 +146,7 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
 
     public static final HashMap<String, AbstractAugment> modMap = new HashMap<>();
     public static MyScreen gridCardSelectScreen1 ;
+    public static ChooseModifierScreen gridCardSelectScreen2 ;
     /**
      * 加载json文件
      *
@@ -169,15 +209,21 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
     public void receivePostInitialize() {
         BaseMod.registerModBadge(ImageMaster.loadImage("NaijiuModResources/localization/relics/bell.png"),ModID,"Dieyou", "耐久决定方式:稀有度基数*卡牌类型基数。下方可以调整对应的基数", new MyModConfig());
         (new AutoAdd(ModID))
-                .packageFilter("CardAugments.cardmods")
+                .packageFilter("Naijiumod.cardModifier")
                 .any(AbstractAugment.class, (info, abstractAugment) -> registerAugment(abstractAugment, ModID));
+        (new AutoAdd(ModID))
+                .packageFilter("mojichimera.augments")
+                .any(AbstractAugment.class, (info, abstractAugment) -> registerAugment(abstractAugment, ModID));
+
         logger.info("Done loading card mods");
         gridCardSelectScreen1 = new MyScreen();
+        gridCardSelectScreen2 = new ChooseModifierScreen();
       BaseMod.addCustomScreen(gridCardSelectScreen1);
+      BaseMod.addCustomScreen(gridCardSelectScreen2);
     }
 
     public static void registerAugment(AbstractAugment a, String modID) {
-        if (!a.identifier(null).equals("")) {
+        if (!a.identifier(null).isEmpty()) {
             modMap.put(a.identifier(null), a);
         } else {
             logger.warn("Augment " + a + " does not set an identifier, Chimera Cards can not add this mod via console commands!");

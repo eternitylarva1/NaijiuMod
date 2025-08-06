@@ -1,0 +1,60 @@
+{
+  "mojichimera:LosePowerPower": {
+    "NAME": "下降",
+    "DESCRIPTIONS": ["在你的回合结束时，失去 #b", " 层 #y", " 。"]
+  },
+  "mojichimera:BiasedPower": {
+    "NAME": "偏差",
+    "DESCRIPTIONS": ["在你的回合开始时，失去 #b", " 点 #y", " 。持续 #b", " 回合。", " 回合。"]
+  },
+  "mojichimera:NextTurnStartPlayPower": {
+    "NAME": "准备",
+    "DESCRIPTIONS": [
+      "#b%1$s 回合后，在你的回合开始时，打出 #b%2$s 张 %3$s 。",
+      "在下个回合开始时，打出 #b%1$s 张 %2$s 。"
+    ]
+  },
+  "mojichimera:NextTurnAddToHandPower": {
+    "NAME": "量产",
+    "DESCRIPTIONS": [
+      "#b%1$s 回合后，将 #b%2$s 张 %3$s 加入手牌。",
+      "在下个回合开始时，将 #b%1$s 张 %2$s 加入手牌。"
+    ]
+  },
+  "mojichimera:SteelizePower": {
+    "NAME": "钢铁化",
+    "DESCRIPTIONS": ["本回合打出的下 #b%1$s 张牌数值增加 #b%2$s%% 。"]
+  },
+  "mojichimera:HeatsinksProtocolPower": {
+    "NAME": "散热协议",
+    "DESCRIPTIONS": ["每打出一张 能力 牌，打出 #b%1$s 张 %2$s 。"]
+  },
+  "mojichimera:DarkProtocolPower": {
+    "NAME": "黑暗协议",
+    "DESCRIPTIONS": ["每 消耗 一张牌，打出 #b%1$s 张 %2$s 。"]
+  },
+  "mojichimera:RushdownProtocolPower": {
+    "NAME": "猛虎协议",
+    "DESCRIPTIONS": ["每当你进入 愤怒 时，打出 #b%1$s 张 %2$s 。"]
+  },
+  "mojichimera:ThornsProtocolPower": {
+    "NAME": "荆棘协议",
+    "DESCRIPTIONS": ["每当你受到攻击伤害时，对伤害来源打出 #b%1$s 张 %2$s 。"]
+  },
+  "mojichimera:FireBreathingProtocolPower": {
+    "NAME": "火焰吐息协议",
+    "DESCRIPTIONS": ["每当你抽到一张 状态牌 或 诅咒 牌 时，打出 #b%1$s 张 %2$s 。"]
+  },
+  "mojichimera:SadisticProtocolPower": {
+    "NAME": "残虐协议",
+    "DESCRIPTIONS": ["每当你对一名敌人造成负面状态时，打出 #b%1$s 张 %2$s 。由该效果打出的牌不会触发效果。"]
+  },
+  "mojichimera:FreePower": {
+    "NAME": "免费",
+    "DESCRIPTIONS": ["在你的回合开始时，打出 #b%1$s 张 %2$s 。"]
+  },
+  "mojichimera:EveryTurnStartPlayPower": {
+    "NAME": "免费",
+    "DESCRIPTIONS": ["在你的回合开始时，打出 #b%1$s 张 %2$s 。"]
+  }
+}
