@@ -14,17 +14,23 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.Keyword;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import static com.megacrit.cardcrawl.core.Settings.language;
 
 /**
  * 加载遗物 用于在游戏中注入你修改的内容
@@ -34,7 +40,7 @@ import java.util.HashMap;
  **/
 @SpireInitializer
 @SuppressWarnings("unused")
-public class LoadMySpireMod implements OnStartBattleSubscriber,PostInitializeSubscriber,EditCardsSubscriber,PostDungeonUpdateSubscriber,StartActSubscriber,PostDungeonInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber {
+public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubscriber,PostInitializeSubscriber,EditCardsSubscriber,PostDungeonUpdateSubscriber,StartActSubscriber,PostDungeonInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber {
     /**
      * 日志对象 用来输出日志 指定本类 LoadMyEasyMod 以确认日志的输出对象
      */
@@ -88,6 +94,7 @@ public class LoadMySpireMod implements OnStartBattleSubscriber,PostInitializeSub
     public void receiveEditStrings() {
 
         receiveJson("UI", "uistrings.json", UIStrings.class);
+        receiveJson("Power", "powerstrings.json", PowerStrings.class);
 
     }
     public static final ArrayList<AbstractAugment> commonMods = new ArrayList<>();
@@ -209,4 +216,22 @@ public class LoadMySpireMod implements OnStartBattleSubscriber,PostInitializeSub
           }
         }
 
+    @Override
+    public void receiveEditKeywords() {
+        Gson gson = new Gson();
+        String lang = "ENG";
+        if (language == Settings.GameLanguage.ZHS) {
+            lang = "ZHS";
+        }
+
+        String json = Gdx.files.internal("NaijiuModResources/localization/"+lang+"/keywords.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
+        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+        if (keywords != null) {
+            for (Keyword keyword : keywords) {
+                // 这个id要全小写
+                BaseMod.addKeyword("naijiu", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
+    }
 }

@@ -10,6 +10,7 @@ import Naijiumod.helpers.ModHelper;
 import Naijiumod.hook.LoadMySpireMod;
 import Naijiumod.hook.MyModConfig;
 
+import Naijiumod.utils.Invoker;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -28,11 +29,12 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
-
+import java.util.ArrayList;
 
 
 public class FumoEffect extends AbstractGameEffect {
@@ -105,6 +107,23 @@ public class FumoEffect extends AbstractGameEffect {
                 CampfireUI cm=rest.campfireUI;
                 cm.hidden=false;
                 cm.somethingSelected=false;
+                ArrayList<AbstractCampfireOption> buttons = Invoker.getField(cm, "buttons");
+                for(AbstractCampfireOption c1: buttons){
+                    CardGroup cardGroup=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                    if (c1 instanceof FumoOption){
+                        for(AbstractCard c: AbstractDungeon.player.masterDeck.group){
+                            if(CardModifierManager.hasModifier(c, ItemMod.ID)){
+                                ItemMod itemMod    = (ItemMod)(CardModifierManager.getModifiers(c, ItemMod.ID)).get(0);
+                                if (itemMod.damo >= MyModConfig.Damo){
+                                    cardGroup.addToTop(c);
+                                }
+                            }
+                        }
+                        c1.usable = !cardGroup.isEmpty();
+                    }
+
+
+                }
                 cm.update();
 
             }

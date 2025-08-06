@@ -75,6 +75,42 @@ public class ItemMod extends AbstractCardModifier {
       values.add(new SlayerMod());         // 添加 SlayerMod
       values.add(new SurgeMod());          // 添加 SurgeMod
       values.add(new SurvivorMod());       // 添加 SurvivorMod
+      values.add(new AberrantMod());
+      values.add(new AbsoluteMod());
+      values.add(new AlphaMod());
+      values.add(new AmplifiedMod());
+      values.add(new AngryMod());
+      values.add(new AutoMod());
+      values.add(new BashMod());
+      values.add(new BetaMod());
+      values.add(new BundledMod());
+      values.add(new ClashyMod());
+      values.add(new CultistMod());
+      values.add(new DemurMod());
+      values.add(new DivergentMod());
+      values.add(new EchoMod());
+      values.add(new FanaticMod());
+      values.add(new FlexMod());
+      values.add(new FormMod());
+      values.add(new ForOneMod());
+      values.add(new FragileMod());
+      values.add(new GlassMod());
+      values.add(new GraveMod());
+      values.add(new HemoMod());
+      values.add(new InfiniteMod());
+      values.add(new InvertedMod());
+      values.add(new JankMod());
+      values.add(new MeteorMod());
+      values.add(new MK2Mod());
+      values.add(new NuclearMod());
+      values.add(new OmegaMod());
+      values.add(new PhilosophersMod());
+      values.add(new RunicMod());
+      values.add(new SanctifiedMod());
+      values.add(new SearingMod());
+      values.add(new ShiningMod());
+      values.add(new SignatureMod());
+      values.add(new XMod());
     }
     AbstractAugment randomValue = values.get(new Random().nextInt(values.size()-1));
 

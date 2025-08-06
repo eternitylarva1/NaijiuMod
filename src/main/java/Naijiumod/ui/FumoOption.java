@@ -9,7 +9,6 @@ import Naijiumod.helpers.ModHelper;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 
 public class FumoOption extends AbstractCampfireOption {
@@ -23,7 +22,7 @@ public class FumoOption extends AbstractCampfireOption {
 
     public void updateUsability(boolean canUse) {
         this.description = canUse ? TEXT[1] : TEXT[2];
-        this.img = ImageMaster.loadImage("NaijiuModResources/img/smith1.png");
+        this.img = ImageMaster.loadImage("NaijiuModResources/images/smith1.png");
     }
 
     public void useOption() {

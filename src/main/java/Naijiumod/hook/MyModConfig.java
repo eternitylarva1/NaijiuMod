@@ -21,7 +21,7 @@ public class MyModConfig extends EasyConfigPanel {
     public static int UnCommon = 5;
     public static int Common = 4;
     public static int Other = 3;
-    public static int Attack = 3;
-    public static int Skill = 2;
-    public static int Power = 1;
+    public static int Attack = 5;
+    public static int Skill = 4;
+    public static int Power = 3;
 }

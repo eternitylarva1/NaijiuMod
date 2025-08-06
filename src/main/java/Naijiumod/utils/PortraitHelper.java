@@ -20,9 +20,9 @@
 /*     */ 
 /*     */ public class PortraitHelper
 /*     */ {
-/*  23 */   private static final Texture attackMask = TextureLoader.getTexture("CardAugmentsResources/images/cards/AttackMask.png");
-/*  24 */   private static final Texture skillMask = TextureLoader.getTexture("CardAugmentsResources/images/cards/SkillMask.png");
-/*  25 */   private static final Texture powerMask = TextureLoader.getTexture("CardAugmentsResources/images/cards/PowerMask.png");
+/*  23 */   private static final Texture attackMask = TextureLoader.getTexture("NaijiuModResources/images/cards/AttackMask.png");
+/*  24 */   private static final Texture skillMask = TextureLoader.getTexture("NaijiuModResources/images/cards/SkillMask.png");
+/*  25 */   private static final Texture powerMask = TextureLoader.getTexture("NaijiuModResources/images/cards/PowerMask.png");
 /*     */   private static final int WIDTH = 250;
 /*     */   private static final int HEIGHT = 190;
 /*  28 */   private static final HashMap<Pair<String, AbstractCard.CardType>, Pair<TextureAtlas.AtlasRegion, Texture>> hashedTextures = new HashMap<>();

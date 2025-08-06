@@ -25,8 +25,8 @@ import basemod.interfaces.CloneablePowerInterface;
 /* 24 */     this.type = PowerType.DEBUFF;
 /* 25 */     this.isTurnBased = true;
 /*    */     
-/* 27 */     this.region128 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture("CardAugmentsResources/images/powers/blahblah84.png"), 0, 0, 84, 84);
-/* 28 */     this.region48 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture("CardAugmentsResources/images/powers/blahblah32.png"), 0, 0, 32, 32);
+/* 27 */     this.region128 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture("NaijiuModResources/images/powers/blahblah84.png"), 0, 0, 84, 84);
+/* 28 */     this.region48 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture("NaijiuModResources/images/powers/blahblah32.png"), 0, 0, 32, 32);
 /*    */     
 /* 30 */     updateDescription();
 /*    */   }

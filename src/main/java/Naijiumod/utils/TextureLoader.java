@@ -29,7 +29,7 @@
 /* 29 */         loadTexture(textureString);
 /* 30 */       } catch (GdxRuntimeException e) {
 /* 31 */         logger.error("Could not find texture: " + textureString);
-/* 32 */         return getTexture("CardAugmentsResources/images/ui/missing_texture.png");
+/* 32 */         return getTexture("NaijiuModResources/images/ui/settingsButtonShadow.png");
 /*    */       } 
 /*    */     }
 /* 35 */     return textures.get(textureString);
