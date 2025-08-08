@@ -3,7 +3,9 @@ package Naijiumod.hook;
 
 
 import Naijiumod.cardModifier.AbstractAugment;
+import Naijiumod.cardModifier.DynvarCarrier;
 import Naijiumod.cardModifier.ItemMod;
+import Naijiumod.helpers.DynamicDynamicVariableManager;
 import Naijiumod.screens.ChooseModifierScreen;
 import Naijiumod.screens.MyScreen;
 import Naijiumod.ui.FumoEffect;
@@ -11,13 +13,15 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.abstracts.CustomRelic;
+import basemod.abstracts.DynamicVariable;
 import basemod.helpers.CardModifierManager;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.StSLib;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -25,6 +29,7 @@ import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -204,7 +209,22 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
 
 
     }
-
+    /*     */   @SpirePatch2(clz = CardCrawlGame.class, method = "create")
+    /*     */   public static class PostLoadFontsPatch
+            /*     */   {
+        /*     */     @SpireInsertPatch(locator = Locator.class)
+        /*     */     public static void load() {
+            /* 924 */       ;
+            /*     */     }
+        /*     */
+        /*     */     public static class Locator
+                /*     */       extends SpireInsertLocator {
+            /*     */       public int[] Locate(CtBehavior ctBehavior) throws Exception {
+                /* 930 */         Matcher.MethodCallMatcher methodCallMatcher = new Matcher.MethodCallMatcher(AbstractCard.class, "initializeDynamicFrameWidths");
+                /* 931 */         return LineFinder.findInOrder(ctBehavior, (Matcher)methodCallMatcher);
+                /*     */       }
+            /*     */     }
+        /*     */   }
     @Override
     public void receivePostInitialize() {
         BaseMod.registerModBadge(ImageMaster.loadImage("NaijiuModResources/localization/relics/bell.png"),ModID,"Dieyou", "耐久决定方式:稀有度基数*卡牌类型基数。下方可以调整对应的基数", new MyModConfig());
@@ -220,6 +240,8 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
         gridCardSelectScreen2 = new ChooseModifierScreen();
       BaseMod.addCustomScreen(gridCardSelectScreen1);
       BaseMod.addCustomScreen(gridCardSelectScreen2);
+        BaseMod.addDynamicVariable((DynamicVariable) DynamicDynamicVariableManager.instance);
+        /*     */
     }
 
     public static void registerAugment(AbstractAugment a, String modID) {
@@ -228,6 +250,9 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
         } else {
             logger.warn("Augment " + a + " does not set an identifier, Chimera Cards can not add this mod via console commands!");
         }
+        if (a instanceof DynvarCarrier) {
+            /* 255 */       DynamicDynamicVariableManager.registerDynvarCarrier((DynvarCarrier)a);
+            /*     */     }
         switch (a.getModRarity()) {
             case COMMON:
                 commonMods.add(a);
@@ -251,6 +276,12 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
               if(StSLib.getMasterDeckEquivalent(card)!=null){
                   if(CardModifierManager.hasModifier(card,ItemMod.ID)){
                        ItemMod itemMod = (ItemMod)CardModifierManager.getModifiers(card, ItemMod.ID).get(0);
+                       if(StSLib.getMasterDeckEquivalent(card)==null){
+                           break;
+                       }
+                       if(CardModifierManager.getModifiers(StSLib.getMasterDeckEquivalent(card), ItemMod.ID).isEmpty()){
+                           break;
+                       }
                        ItemMod itemMod1 = (ItemMod)CardModifierManager.getModifiers(StSLib.getMasterDeckEquivalent(card), ItemMod.ID).get(0);
                        itemMod.uses=itemMod1.uses;
                        card.initializeDescription();

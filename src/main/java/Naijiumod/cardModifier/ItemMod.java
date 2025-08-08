@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.PeacePipe;
 import com.megacrit.cardcrawl.ui.campfire.SmithOption;
@@ -75,17 +76,37 @@ public static ArrayList<AbstractAugment> getModifiers() {
 
   return values ;
 }
-  public static AbstractCard addRandomModifier(AbstractCard c) {
-  ArrayList<AbstractAugment> values = getModifiers();
-    AbstractAugment randomValue = values.get(AbstractDungeon.cardRandomRng.random(values.size() - 1));
 
-while(!randomValue.canApplyTo( c)&&values.size()>1){
+  public static AbstractCard addRandomModifier(AbstractCard c,int pianyi,int index) {
+  ArrayList<AbstractAugment> values = getModifiers();
+    int cardIndex = -1;
+    if (AbstractDungeon.player != null && AbstractDungeon.player.masterDeck != null) {
+      cardIndex = AbstractDungeon.player.masterDeck.group.indexOf(c);
+    }
+
+    // 如果找不到位置，使用备用方法
+    if (cardIndex == -1) {
+      cardIndex = c.hashCode(); // 使用对象哈希码作为备用
+    }
+
+    // 使用卡牌属性和位置生成种子
+    long seed = (long) c.cardID.hashCode()
+            ^ (long) c.name.hashCode()
+            ^ (long) index
+            ^ (long) pianyi
+            ^ (long) AbstractDungeon.floorNum^ Settings.seed;
+System.out.println( "第"+pianyi+"张牌"+ "通过伪随机生成的种子为"+seed);
+    com.megacrit.cardcrawl.random.Random rng=new com.megacrit.cardcrawl.random.Random(seed);
+    AbstractAugment randomValue = values.get(rng.random(values.size() - 1));
+
+while(!randomValue.validCard( c)&&values.size()>1){
    values.remove(randomValue);
-  randomValue = values.get(AbstractDungeon.cardRandomRng.random(values.size() - 1));
+  randomValue = values.get(rng.random(values.size() - 1));
 }
     CardModifierManager.addModifier(c, randomValue);
     return c;
   }
+
   public List<TooltipInfo> additionalTooltips(AbstractCard card)
   {List <TooltipInfo> ret = new ArrayList<>();
     ret.add(new TooltipInfo(TEXT[0],TEXT[2]));

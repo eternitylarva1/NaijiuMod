@@ -33,6 +33,7 @@ Naijiumod\patchs\UpdateDynvarValuesPatches.class
 mojichimera\augments\uncommon\FuritenMod.class
 Naijiumod\patchs\MultiPreviewFieldPatches$renderSwappablesInSingleViewPatch.class
 Naijiumod\patchs\CopyNecroModsPatches$ApplyMods.class
+Naijiumod\patchs\SCVPatches.class
 Naijiumod\patchs\OnCardGeneratedPatches$ModifyNeowRewardCardsPatch.class
 Naijiumod\cardModifier\SignatureMod.class
 mojichimera\augments\common\RebateMod$1.class
@@ -100,6 +101,7 @@ Naijiumod\patchs\InterruptUseCardFieldPatches.class
 mojichimera\augments\common\RentalMod$1.class
 mojichimera\augments\uncommon\VirtueMod.class
 Naijiumod\cardModifier\InvertedMod$1.class
+Naijiumod\patchs\SCVPatches$UpdateInputPatch.class
 mojichimera\augments\rare\BiasedMod.class
 mojichimera\augments\special\ShareHelperMod.class
 mojichimera\augments\uncommon\SadisticMod.class
@@ -117,14 +119,17 @@ mojichimera\augments\uncommon\PourSaltMod$1.class
 mojichimera\patches\EndTurnPlayPatch.class
 Naijiumod\patchs\EchoFieldPatches$PlayExtraCopies.class
 Naijiumod\patchs\CantUpgradeFieldPatches$CantUpgradeField.class
+Naijiumod\patchs\SCVPatches$ClosePatch.class
 mojichimera\augments\common\DelayedMod$1.class
 mojichimera\augments\uncommon\FlashOfMod.class
 mojichimera\augments\common\VigorMod.class
 mojichimera\augments\common\ReservedMod.class
 Naijiumod\patchs\OnUpgradePatches.class
 mojichimera\augments\uncommon\EducationalMod.class
+Naijiumod\patchs\SCVPatches$RenderPatch.class
 mojichimera\augments\rare\EmbraceMod.class
 Naijiumod\patchs\CopyTheDamnModPatches$FixLibraryCopy$Locator.class
+Naijiumod\patchs\SCVPatches$TipsBeGone.class
 Naijiumod\cardModifier\ReshuffleMod.class
 mojichimera\augments\uncommon\RiichiMod.class
 Naijiumod\patchs\CopyTheDamnModPatches$StopTossingMods.class
@@ -157,6 +162,7 @@ Naijiumod\cardModifier\AbstractAugment$1.class
 mojichimera\augments\common\PastMod$1.class
 Naijiumod\patchs\OnUpgradePatches$FixStackOfPlusSymbols.class
 Naijiumod\cardModifier\DoubtfulMod.class
+Naijiumod\patchs\SCVPatches$UpdatePatch.class
 Naijiumod\cardModifier\GraveMod.class
 mojichimera\augments\common\CombosMod$2.class
 mojichimera\augments\common\RetreatingMod$2.class
@@ -168,6 +174,7 @@ mojichimera\augments\common\StrenuousMod.class
 mojichimera\damagemods\WallopDrawDamage.class
 Naijiumod\cardModifier\BlasphemousMod.class
 Naijiumod\cardModifier\ClashyMod.class
+Naijiumod\patchs\SCVPatches$PreviewScreen.class
 mojichimera\augments\uncommon\TsumoMod$1.class
 mojichimera\augments\rare\IndignantMod.class
 mojichimera\augments\uncommon\ChaoticMod.class
@@ -198,6 +205,7 @@ Naijiumod\card\DummyCard.class
 mojichimera\cardmods\DamageBlock67OffMod.class
 Naijiumod\cardModifier\InfiniteMod.class
 Naijiumod\patchs\UnrestrictedFieldPatches$RenderNewColor$Locator.class
+Naijiumod\hook\LoadMySpireMod$PostLoadFontsPatch$Locator.class
 Naijiumod\patchs\OnCardGeneratedPatches$DraftFix.class
 mojichimera\augments\common\CombosMod.class
 Naijiumod\cardModifier\MeteorMod.class
@@ -302,12 +310,14 @@ Naijiumod\patchs\OnCardGeneratedPatches$ModifySpawnedMasterDeckCards.class
 mojichimera\powers\SadisticProtocolPower.class
 Naijiumod\cardModifier\DynvarCarrier.class
 Naijiumod\utils\CalcHelper.class
+Naijiumod\hook\LoadMySpireMod$PostLoadFontsPatch.class
 mojichimera\augments\rare\TrinityMod.class
 mojichimera\augments\special\FinaleMod$1.class
 Naijiumod\patchs\ActionReplacementPatches$GrabCardInUse$Locator.class
 mojichimera\augments\rare\SociableMod.class
 mojichimera\patches\EndTurnPlayPatch$EndTurnPlayPatch1.class
 mojichimera\util\OnMoveToDiscardSubscriber.class
+Naijiumod\patchs\SCVPatches$OpenPatch.class
 mojichimera\augments\uncommon\ConcludeMod.class
 Naijiumod\patchs\MultiPreviewFieldPatches$ExtraPreviews.class
 Naijiumod\cardModifier\XMod.class
@@ -465,4 +475,5 @@ Naijiumod\patchs\CantUpgradeFieldPatches$MakeStatEquivalentCopy.class
 Naijiumod\screens\ChooseModifierScreen$Enum.class
 Naijiumod\utils\Invoker.class
 Naijiumod\patchs\EchoFieldPatches$PlayExtraCopies$Locator.class
+Naijiumod\patchs\SCVPatches$ClobberTime.class
 mojichimera\augments\rare\HeatsinksMod.class

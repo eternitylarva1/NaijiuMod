@@ -37,6 +37,7 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class FumoEffect extends AbstractGameEffect {
@@ -49,7 +50,7 @@ public class FumoEffect extends AbstractGameEffect {
 
     public FumoEffect() {
         this.screenColor = AbstractDungeon.fadeColor.cpy();
-        this.duration = 2.0F;
+        this.duration = 0.5F;
         this.screenColor.a = 0.0F;
         AbstractDungeon.overlayMenu.proceedButton.hide();
     }
@@ -90,7 +91,7 @@ public class FumoEffect extends AbstractGameEffect {
             ((RestRoom)AbstractDungeon.getCurrRoom()).fadeIn();
         }
 
-        if (this.duration < 2.0F && !this.openedScreen) {
+        if (this.duration < 0.5F && !this.openedScreen) {
             CardGroup cardGroup=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for(AbstractCard c: AbstractDungeon.player.masterDeck.group){
                 if(CardModifierManager.hasModifier(c, ItemMod.ID)){
@@ -102,13 +103,13 @@ public class FumoEffect extends AbstractGameEffect {
             }
             this.openedScreen = true;
       
-              LoadMySpireMod.gridCardSelectScreen1.open(cardGroup, 1, TEXT[3], false, false, true, true);
+              LoadMySpireMod.gridCardSelectScreen1.open(cardGroup, 1, TEXT[3], false, false, false, true);
 /*
             for(AbstractRelic r : AbstractDungeon.player.relics) {
                 r.onSmith();
             }*/
         }
-        if (this.duration < 1.0F && !this.openedScreen2&&this.openedScreen) {
+        if (this.duration < 0.3F && !this.openedScreen2&&this.openedScreen) {
             if(LoadMySpireMod.gridCardSelectScreen1.selectedCards.isEmpty()){
                 this.openedScreen2 = true;
 
@@ -116,11 +117,19 @@ public class FumoEffect extends AbstractGameEffect {
             }
             CardGroup cardGroup=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for(int i=0;i < 3;i++) {
-                cardGroup.addToTop(ItemMod.addRandomModifier(LoadMySpireMod.gridCardSelectScreen1.selectedCards.get(0).makeStatEquivalentCopy()));
+                AbstractCard card =LoadMySpireMod.gridCardSelectScreen1.selectedCards.get(0).makeCopy();
+              card.uuid=LoadMySpireMod.gridCardSelectScreen1.selectedCards.get(0).uuid;
+
+                for(AbstractCardModifier  mod:CardModifierManager.modifiers( ItemMod.addRandomModifier(card,i,AbstractDungeon.player.masterDeck.group.indexOf(LoadMySpireMod.gridCardSelectScreen1.selectedCards.get(0))))){
+
+                        card.initializeDescription();
+
+                }
+                cardGroup.addToTop(card);
             }
             this.openedScreen2 = true;
 
-            LoadMySpireMod.gridCardSelectScreen2.open(cardGroup, 1, TEXT[4], false, false, true, true);
+            LoadMySpireMod.gridCardSelectScreen2.open(cardGroup, 1, TEXT[4], false, false, false, true);
 /*
             for(AbstractRelic r : AbstractDungeon.player.relics) {
                 r.onSmith();
@@ -129,7 +138,7 @@ public class FumoEffect extends AbstractGameEffect {
 
         if (this.duration < 0.0F) {
             this.isDone = true;
-            if (CampfireUI.hidden) {
+
                 AbstractRoom.waitTimer = 0.0F;
                 AbstractDungeon.getCurrRoom().phase = RoomPhase.COMPLETE;
                 ((RestRoom)AbstractDungeon.getCurrRoom()).cutFireSound();
@@ -156,14 +165,20 @@ public class FumoEffect extends AbstractGameEffect {
                 }
                 cm.update();
 
-            }
+
         }
 
+    } public static String removeUnwantedCharacters(String input) {
+        if (input == null) return null;
+
+        return input.replace("#b", "")
+                .replace("#y", "")
+                .replace("NL", "");
     }
 
     private void updateBlackScreenColor() {
-        if (this.duration > 1.0F) {
-            this.screenColor.a = Interpolation.fade.apply(1.0F, 0.0F, (this.duration - 1.0F) * 2.0F);
+        if (this.duration > 0.5F) {
+            this.screenColor.a = Interpolation.fade.apply(1.0F, 0.0F, (this.duration - 0.5F) * 2.0F);
         } else {
             this.screenColor.a = Interpolation.fade.apply(0.0F, 1.0F, this.duration / 1.5F);
         }

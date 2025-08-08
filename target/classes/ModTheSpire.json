@@ -4,8 +4,8 @@
   "author_list": [
     "Dieyou"
   ],
-  "description": "给卡牌添加了耐久值,火堆敲牌回复全部耐久",
-  "version": "1.0.1",
+  "description": "给卡牌添加了耐久值,火堆敲牌回复全部耐久,反复使用卡牌后可以在火堆给卡牌敲词条",
+  "version": "1.0.3",
   "sts_version": "01-01-2020",
   "mts_version": "1.0.0"
 }
