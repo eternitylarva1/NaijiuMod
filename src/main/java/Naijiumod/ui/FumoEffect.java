@@ -103,7 +103,7 @@ public class FumoEffect extends AbstractGameEffect {
             }
             this.openedScreen = true;
       
-              LoadMySpireMod.gridCardSelectScreen1.open(cardGroup, 1, TEXT[3], false, false, false, true);
+              LoadMySpireMod.gridCardSelectScreen1.open(cardGroup, 1, TEXT[3], false, false, true, true);
 /*
             for(AbstractRelic r : AbstractDungeon.player.relics) {
                 r.onSmith();
@@ -129,7 +129,7 @@ public class FumoEffect extends AbstractGameEffect {
             }
             this.openedScreen2 = true;
 
-            LoadMySpireMod.gridCardSelectScreen2.open(cardGroup, 1, TEXT[4], false, false, false, true);
+            LoadMySpireMod.gridCardSelectScreen2.open(cardGroup, 1, TEXT[4], false, false, true, true);
 /*
             for(AbstractRelic r : AbstractDungeon.player.relics) {
                 r.onSmith();
