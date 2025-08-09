@@ -17,6 +17,7 @@ import basemod.abstracts.DynamicVariable;
 import basemod.helpers.CardModifierManager;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.google.gson.Gson;
@@ -39,6 +40,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.stream.Collectors;
 
+import static chimeracardsplus.ChimeraCardsPlus.*;
 import static com.megacrit.cardcrawl.core.Settings.language;
 import static mojichimera.mojichimera.getModID;
 import static mojichimera.mojichimera.loadLocalizationIfAvailable;
@@ -139,7 +141,13 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
         BaseMod.loadCustomStringsFile(PowerStrings.class,
                 getModID() + "Resources/localization/"+loadLocalizationIfAvailable("mojichimera-Power-Strings.json"));
 
-
+        if (!DEFAULT_LANGUAGE.equals(getLangString())) {
+            try {
+                loadLocalization(getLangString());
+            } catch (GdxRuntimeException e) {
+                e.printStackTrace();
+            }
+        }
     }
     public static final ArrayList<AbstractAugment> commonMods = new ArrayList<>();
 
@@ -170,6 +178,8 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
         String relicStrings = Gdx.files.internal("NaijiuModResources/localization/" +lang+ jsonFileName).readString("UTF-8");
         BaseMod.loadCustomStrings(className, relicStrings);
         logger.info(">>>加载[{}]的json文件结束<<<", typeInfo);
+        loadLocalization(DEFAULT_LANGUAGE);
+
     }
 
     
@@ -234,6 +244,9 @@ public class LoadMySpireMod implements EditKeywordsSubscriber,OnStartBattleSubsc
         (new AutoAdd(ModID))
                 .packageFilter("mojichimera.augments")
                 .any(AbstractAugment.class, (info, abstractAugment) -> registerAugment(abstractAugment, ModID));
+    new AutoAdd(ModID)
+                .packageFilter("chimeracardsplus.cardmods")
+                .any(AbstractAugment.class, (info, abstractAugment) ->  registerAugment(abstractAugment, modID));
 
         logger.info("Done loading card mods");
         gridCardSelectScreen1 = new MyScreen();

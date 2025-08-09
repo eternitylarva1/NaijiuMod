@@ -120,7 +120,7 @@ public class FumoEffect extends AbstractGameEffect {
                 AbstractCard card =LoadMySpireMod.gridCardSelectScreen1.selectedCards.get(0).makeCopy();
               card.uuid=LoadMySpireMod.gridCardSelectScreen1.selectedCards.get(0).uuid;
 
-                for(AbstractCardModifier  mod:CardModifierManager.modifiers( ItemMod.addRandomModifier(card,i,AbstractDungeon.player.masterDeck.group.indexOf(LoadMySpireMod.gridCardSelectScreen1.selectedCards.get(0))))){
+                for(AbstractCardModifier  mod:CardModifierManager.modifiers( ItemMod.addRandomModifier(card,i,AbstractDungeon.player.masterDeck.group.indexOf(LoadMySpireMod.gridCardSelectScreen1.selectedCards.get(0)),LoadMySpireMod.gridCardSelectScreen1.selectedCards.get(0).name))){
 
                         card.initializeDescription();
 

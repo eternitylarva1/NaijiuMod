@@ -73,11 +73,11 @@ public  class ItemMod extends AbstractCardModifier {
 public static ArrayList<AbstractAugment> getModifiers() {
   ArrayList<AbstractAugment> values = new ArrayList<>( LoadMySpireMod.modMap.values());
 // 随机获取一个值
-
+System.out.println( values.size());
   return values ;
 }
 
-  public static AbstractCard addRandomModifier(AbstractCard c,int pianyi,int index) {
+  public static AbstractCard addRandomModifier(AbstractCard c,int pianyi,int index,String cardName) {
   ArrayList<AbstractAugment> values = getModifiers();
     int cardIndex = -1;
     if (AbstractDungeon.player != null && AbstractDungeon.player.masterDeck != null) {
@@ -91,7 +91,7 @@ public static ArrayList<AbstractAugment> getModifiers() {
 
     // 使用卡牌属性和位置生成种子
     long seed = (long) c.cardID.hashCode()
-            ^ (long) c.name.hashCode()
+            ^ (long) cardName.hashCode()
             ^ (long) index
             ^ (long) pianyi
             ^ (long) AbstractDungeon.floorNum^ Settings.seed;

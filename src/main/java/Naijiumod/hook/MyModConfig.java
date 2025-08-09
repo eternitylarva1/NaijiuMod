@@ -17,11 +17,11 @@ public class MyModConfig extends EasyConfigPanel {
     }
     public static String Description="";
     public static int Rare=6;
-    public static int Damo=8;
+    public static int Damo=10;
     public static int UnCommon = 5;
     public static int Common = 4;
     public static int Other = 3;
-    public static int Attack = 5;
-    public static int Skill = 4;
-    public static int Power = 3;
+    public static int Attack = 4;
+    public static int Skill = 3;
+    public static int Power = 2;
 }
